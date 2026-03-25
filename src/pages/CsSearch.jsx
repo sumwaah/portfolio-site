@@ -150,6 +150,27 @@ export default function CaseStudyDMA() {
 
       <Divider />
 
+<section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
+        <FadeIn><SectionLabel>Impact</SectionLabel></FadeIn>
+        <FadeIn delay={0.05}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "0 40px" }}>
+            <StatCard number="4" label="Top solutions selected for piloting" />
+            <StatCard number="2" label="Partially incorporated into product roadmap" />
+            <StatCard number="1" label="Skunkworks program established for ongoing innovation" />
+          </div>
+        </FadeIn>
+        <FadeIn delay={0.15}>
+          <div style={{ marginTop: "40px", padding: "28px 32px", background: TAN_BG, borderRadius: "12px", borderLeft: `3px solid ${POP}44` }}>
+            <p style={{ fontSize: "15px", color: MID, lineHeight: 1.8, margin: 0 }}>
+              The more lasting contribution was organizational: a repeatable model for rapid innovation in a highly constrained space. The team could keep adapting as regulations and AI capabilities evolved, rather than relying on one-time design sprints.
+            </p>
+          </div>
+        </FadeIn>
+      </section>
+
+      <Divider />
+
+
       <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
         <FadeIn><SectionLabel>The approach</SectionLabel></FadeIn>
         <FadeIn delay={0.05}>
@@ -171,26 +192,7 @@ export default function CaseStudyDMA() {
 
       <Divider />
 
-      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
-        <FadeIn><SectionLabel>Impact</SectionLabel></FadeIn>
-        <FadeIn delay={0.05}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "0 40px" }}>
-            <StatCard number="4" label="Top solutions selected for piloting" />
-            <StatCard number="2" label="Partially incorporated into product roadmap" />
-            <StatCard number="1" label="Skunkworks program established for ongoing innovation" />
-          </div>
-        </FadeIn>
-        <FadeIn delay={0.15}>
-          <div style={{ marginTop: "40px", padding: "28px 32px", background: TAN_BG, borderRadius: "12px", borderLeft: `3px solid ${POP}44` }}>
-            <p style={{ fontSize: "15px", color: MID, lineHeight: 1.8, margin: 0 }}>
-              The more lasting contribution was organizational: a repeatable model for rapid innovation in a highly constrained space. The team could keep adapting as regulations and AI capabilities evolved, rather than relying on one-time design sprints.
-            </p>
-          </div>
-        </FadeIn>
-      </section>
-
-      <Divider />
-
+      
       <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 80px" }}>
         <FadeIn><SectionLabel>Why this matters</SectionLabel></FadeIn>
         <FadeIn delay={0.05}>
@@ -210,15 +212,15 @@ export default function CaseStudyDMA() {
         </FadeIn>
       </section>
 
-      <div style={{ background: TAN_BG, padding: "60px 24px" }}>
-        <div style={{ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
-          <a href="/" style={{ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block" }}>
-            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }}>← PREVIOUS</div>
-            <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }}>Differentiating an AI product for a billion-person market</div>
+            <div style={ background: TAN_BG, padding: "60px 24px" }>
+        <div style={ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }>
+          <a href="/strategic-design/gemini-india" style={ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block" }>
+            <div style={ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }>← PREVIOUS</div>
+            <div style={ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }>Differentiating an AI product for a billion-person market</div>
           </a>
-          <a href="/" style={{ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block", textAlign: "right" }}>
-            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }}>NEXT →</div>
-            <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }}>Designing an ecosystem, not just an app</div>
+          <a href="/strategic-design/ecosystem" style={ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block", textAlign: "right" }>
+            <div style={ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }>NEXT →</div>
+            <div style={ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }>Designing an ecosystem, not just an app</div>
           </a>
         </div>
       </div>

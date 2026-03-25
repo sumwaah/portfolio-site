@@ -438,6 +438,49 @@ export default function CaseStudyEcosystem() {
 
       <Divider />
 
+<section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
+        <FadeIn>
+          <div style={{
+            fontFamily: "'DM Mono', monospace",
+            fontSize: "11px",
+            color: POP,
+            letterSpacing: "0.12em",
+            marginBottom: "16px",
+            textTransform: "uppercase",
+            opacity: 0.7,
+          }}>IMPACT</div>
+        </FadeIn>
+
+        <FadeIn delay={0.05}>
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
+            gap: "0 40px",
+          }}>
+            <StatCard number="Multiple" label="Cross-app initiatives built and launched" />
+            <StatCard number="Ongoing" label="Ecosystem metrics proposal in development" />
+            <StatCard number="Growing" label="Team expanding as org recognizes strategic importance" />
+          </div>
+        </FadeIn>
+
+        <FadeIn delay={0.15}>
+          <div style={{
+            marginTop: "40px",
+            padding: "28px 32px",
+            background: TAN_BG,
+            borderRadius: "12px",
+            borderLeft: `3px solid ${POP}44`,
+          }}>
+            <p style={{ fontSize: "15px", color: MID, lineHeight: 1.8, margin: 0 }}>
+              Existing efforts across teams have been unblocked and accelerated. The metrics and incentive proposals are actively being championed. This work is ongoing — and the fact that the team keeps growing is perhaps the strongest signal that it's working.
+            </p>
+          </div>
+        </FadeIn>
+      </section>
+
+      <Divider />
+
+
       {/* The Approach */}
       <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
         <FadeIn>
@@ -499,48 +542,7 @@ export default function CaseStudyEcosystem() {
       <Divider />
 
       {/* Impact */}
-      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
-        <FadeIn>
-          <div style={{
-            fontFamily: "'DM Mono', monospace",
-            fontSize: "11px",
-            color: POP,
-            letterSpacing: "0.12em",
-            marginBottom: "16px",
-            textTransform: "uppercase",
-            opacity: 0.7,
-          }}>IMPACT</div>
-        </FadeIn>
-
-        <FadeIn delay={0.05}>
-          <div style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-            gap: "0 40px",
-          }}>
-            <StatCard number="Multiple" label="Cross-app initiatives built and launched" />
-            <StatCard number="Ongoing" label="Ecosystem metrics proposal in development" />
-            <StatCard number="Growing" label="Team expanding as org recognizes strategic importance" />
-          </div>
-        </FadeIn>
-
-        <FadeIn delay={0.15}>
-          <div style={{
-            marginTop: "40px",
-            padding: "28px 32px",
-            background: TAN_BG,
-            borderRadius: "12px",
-            borderLeft: `3px solid ${POP}44`,
-          }}>
-            <p style={{ fontSize: "15px", color: MID, lineHeight: 1.8, margin: 0 }}>
-              Existing efforts across teams have been unblocked and accelerated. The metrics and incentive proposals are actively being championed. This work is ongoing — and the fact that the team keeps growing is perhaps the strongest signal that it's working.
-            </p>
-          </div>
-        </FadeIn>
-      </section>
-
-      <Divider />
-
+      
       {/* Why this matters */}
       <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 80px" }}>
         <FadeIn>
@@ -589,61 +591,19 @@ export default function CaseStudyEcosystem() {
       </section>
 
       {/* Next / Prev */}
-      <div style={{ background: TAN_BG, padding: "60px 24px" }}>
-        <div style={{
-          maxWidth: "720px",
-          margin: "0 auto",
-          display: "grid",
-          gridTemplateColumns: "1fr 1fr",
-          gap: "24px",
-        }}>
-          <a href="/" style={{
-            textDecoration: "none",
-            padding: "28px",
-            background: WARM_BG,
-            borderRadius: "12px",
-            border: `1px solid ${TAN}`,
-            display: "block",
-          }}>
-            <div style={{
-              fontFamily: "'DM Mono', monospace",
-              fontSize: "11px",
-              color: SUBTLE,
-              letterSpacing: "0.1em",
-              marginBottom: "8px",
-            }}>← PREVIOUS</div>
-            <div style={{
-              fontFamily: "'Instrument Serif', serif",
-              fontSize: "18px",
-              color: DARK,
-            }}>Evolving a business model under regulatory pressure</div>
+            <div style={ background: TAN_BG, padding: "60px 24px" }>
+        <div style={ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }>
+          <a href="/strategic-design/search-regulation" style={ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block" }>
+            <div style={ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }>← PREVIOUS</div>
+            <div style={ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }>Evolving a business model under regulatory pressure</div>
           </a>
-          <a href="/" style={{
-            textDecoration: "none",
-            padding: "28px",
-            background: WARM_BG,
-            borderRadius: "12px",
-            border: `1px solid ${TAN}`,
-            display: "block",
-            textAlign: "right",
-          }}>
-            <div style={{
-              fontFamily: "'DM Mono', monospace",
-              fontSize: "11px",
-              color: SUBTLE,
-              letterSpacing: "0.1em",
-              marginBottom: "8px",
-            }}>NEXT →</div>
-            <div style={{
-              fontFamily: "'Instrument Serif', serif",
-              fontSize: "18px",
-              color: DARK,
-            }}>From pivot to 500M users</div>
+          <a href="/strategic-design/files" style={ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block", textAlign: "right" }>
+            <div style={ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }>NEXT →</div>
+            <div style={ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }>From pivot to 500 million users</div>
           </a>
         </div>
       </div>
 
-      {/* Footer */}
       <footer style={{
         maxWidth: "720px",
         margin: "0 auto",

@@ -45,6 +45,10 @@ const PhoneScreen = ({ src, alt, caption, radius }) => (
   </div>
 );
 
+const Pill = ({ children }) => (
+  <span style={{ display: "inline-block", padding: "4px 14px", borderRadius: "20px", fontSize: "12px", fontFamily: "'DM Mono', monospace", letterSpacing: "0.03em", background: TAN_BG, color: MUTED, marginRight: "8px", marginBottom: "8px" }}>{children}</span>
+);
+
 const StatCard = ({ number, label }) => (
   <div style={{ padding: "28px 0", borderTop: `1px solid ${TAN}` }}>
     <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "42px", color: POP, lineHeight: 1.1, marginBottom: "6px" }}>{number}</div>
@@ -126,6 +130,45 @@ export default function CaseStudyFiles() {
       <Divider />
 
       <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
+        <FadeIn><SectionLabel>My role</SectionLabel></FadeIn>
+        <FadeIn delay={0.05}>
+          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 20px" }}>
+            I led the entire NBU Android Utilities division, which included Files, Camera Go, and other core utilities. I oversaw the growth of Files from its critical pivot all the way to 500M users, and Camera Go's launch across a dozen device manufacturers to 10M users.
+          </p>
+        </FadeIn>
+        <FadeIn delay={0.1}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "28px" }}>
+            {["Division lead", "Product strategy", "Team growth", "0-to-1 launches", "Design craft"].map(s => (
+              <Pill key={s}>{s}</Pill>
+            ))}
+          </div>
+        </FadeIn>
+      </section>
+
+      <Divider />
+
+<section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
+        <FadeIn><SectionLabel>Impact</SectionLabel></FadeIn>
+        <FadeIn delay={0.05}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "0 40px" }}>
+            <StatCard number="500M+" label="Monthly active users" />
+            <StatCard number="3 years" label="Highest-rated Google app" />
+            <StatCard number="Acquired" label="By Android as a core utility" />
+          </div>
+        </FadeIn>
+        <FadeIn delay={0.15}>
+          <div style={{ marginTop: "40px", padding: "28px 32px", background: TAN_BG, borderRadius: "12px", borderLeft: `3px solid ${POP}44` }}>
+            <p style={{ fontSize: "15px", color: MID, lineHeight: 1.8, margin: 0 }}>
+              Several design paradigms my team pioneered — the Nearby Share interaction model, the Drive cleaning tab pattern, animated dialogs for mixed-literacy users — became Android-wide precedents. The team's work didn't just ship a product; it established design patterns used across the entire platform.
+            </p>
+          </div>
+        </FadeIn>
+      </section>
+
+      <Divider />
+
+
+      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
         <FadeIn><SectionLabel>The approach</SectionLabel></FadeIn>
         <FadeIn delay={0.05}>
           <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: "28px", fontWeight: 400, color: DARK, lineHeight: 1.3, margin: "0 0 24px" }}>Build to learn, then build to last</h2>
@@ -168,26 +211,7 @@ export default function CaseStudyFiles() {
 
       <Divider />
 
-      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
-        <FadeIn><SectionLabel>Impact</SectionLabel></FadeIn>
-        <FadeIn delay={0.05}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "0 40px" }}>
-            <StatCard number="500M+" label="Monthly active users" />
-            <StatCard number="3 years" label="Highest-rated Google app" />
-            <StatCard number="Acquired" label="By Android as a core utility" />
-          </div>
-        </FadeIn>
-        <FadeIn delay={0.15}>
-          <div style={{ marginTop: "40px", padding: "28px 32px", background: TAN_BG, borderRadius: "12px", borderLeft: `3px solid ${POP}44` }}>
-            <p style={{ fontSize: "15px", color: MID, lineHeight: 1.8, margin: 0 }}>
-              Several design paradigms my team pioneered — the Nearby Share interaction model, the Drive cleaning tab pattern, animated dialogs for mixed-literacy users — became Android-wide precedents. The team's work didn't just ship a product; it established design patterns used across the entire platform.
-            </p>
-          </div>
-        </FadeIn>
-      </section>
-
-      <Divider />
-
+      
       <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 80px" }}>
         <FadeIn><SectionLabel>Why this matters</SectionLabel></FadeIn>
         <FadeIn delay={0.05}>
@@ -207,15 +231,15 @@ export default function CaseStudyFiles() {
         </FadeIn>
       </section>
 
-      <div style={{ background: TAN_BG, padding: "60px 24px" }}>
-        <div style={{ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
-          <a href="/" style={{ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block" }}>
-            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }}>← PREVIOUS</div>
-            <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }}>Designing an ecosystem, not just an app</div>
+            <div style={ background: TAN_BG, padding: "60px 24px" }>
+        <div style={ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }>
+          <a href="/strategic-design/ecosystem" style={ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block" }>
+            <div style={ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }>← PREVIOUS</div>
+            <div style={ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }>Designing an ecosystem, not just an app</div>
           </a>
-          <a href="/" style={{ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block", textAlign: "right" }}>
-            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }}>NEXT →</div>
-            <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }}>Connecting 100 million people to the internet</div>
+          <a href="/strategic-design/station" style={ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block", textAlign: "right" }>
+            <div style={ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }>NEXT →</div>
+            <div style={ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }>Connecting 100 million people to the internet</div>
           </a>
         </div>
       </div>

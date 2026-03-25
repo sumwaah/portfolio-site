@@ -192,6 +192,27 @@ export default function CaseStudyGemini() {
 
       <Divider />
 
+<section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
+        <FadeIn><SectionLabel>Impact</SectionLabel></FadeIn>
+        <FadeIn delay={0.05}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "0 40px" }}>
+            <StatCard number="~20" label="Cross-functional team assembled and led" />
+            <StatCard number="Exponential" label="Growth in downloads and usage following campaigns" />
+            <StatCard number="Adopted" label="Audience focus and insights by product team" />
+          </div>
+        </FadeIn>
+        <FadeIn delay={0.15}>
+          <div style={{ marginTop: "40px", padding: "28px 32px", background: TAN_BG, borderRadius: "12px", borderLeft: `3px solid ${POP}44` }}>
+            <p style={{ fontSize: "15px", color: MID, lineHeight: 1.8, margin: 0 }}>
+              While the product's growth came from many efforts, ours helped accelerate it and showed clear impact. What I'm confident in is the rigor of the approach: quantitative audience analysis, qualitative field research, collaborative solution design, and business-ready recommendations, all delivered in a few months.
+            </p>
+          </div>
+        </FadeIn>
+      </section>
+
+      <Divider />
+
+
       {/* The Approach */}
       <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
         <FadeIn><SectionLabel>The approach</SectionLabel></FadeIn>
@@ -222,26 +243,7 @@ export default function CaseStudyGemini() {
       <Divider />
 
       {/* Impact */}
-      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
-        <FadeIn><SectionLabel>Impact</SectionLabel></FadeIn>
-        <FadeIn delay={0.05}>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "0 40px" }}>
-            <StatCard number="~20" label="Cross-functional team assembled and led" />
-            <StatCard number="Exponential" label="Growth in downloads and usage following campaigns" />
-            <StatCard number="Adopted" label="Audience focus and insights by product team" />
-          </div>
-        </FadeIn>
-        <FadeIn delay={0.15}>
-          <div style={{ marginTop: "40px", padding: "28px 32px", background: TAN_BG, borderRadius: "12px", borderLeft: `3px solid ${POP}44` }}>
-            <p style={{ fontSize: "15px", color: MID, lineHeight: 1.8, margin: 0 }}>
-              While the product's growth came from many efforts, ours helped accelerate it and showed clear impact. What I'm confident in is the rigor of the approach: quantitative audience analysis, qualitative field research, collaborative solution design, and business-ready recommendations, all delivered in a few months.
-            </p>
-          </div>
-        </FadeIn>
-      </section>
-
-      <Divider />
-
+      
       {/* Why this matters */}
       <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 80px" }}>
         <FadeIn><SectionLabel>Why this matters</SectionLabel></FadeIn>
@@ -263,12 +265,12 @@ export default function CaseStudyGemini() {
       </section>
 
       {/* Nav */}
-      <div style={{ background: TAN_BG, padding: "60px 24px" }}>
-        <div style={{ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
+            <div style={ background: TAN_BG, padding: "60px 24px" }>
+        <div style={ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }>
           <div />
-          <a href="/" style={{ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block", textAlign: "right" }}>
-            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }}>NEXT →</div>
-            <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }}>Evolving a business model under regulatory pressure</div>
+          <a href="/strategic-design/search-regulation" style={ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block", textAlign: "right" }>
+            <div style={ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }>NEXT →</div>
+            <div style={ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }>Evolving a business model under regulatory pressure</div>
           </a>
         </div>
       </div>
