@@ -263,15 +263,15 @@ export default function CaseStudyStation() {
         </FadeIn>
       </section>
 
-            <div style={ background: TAN_BG, padding: "60px 24px" }>
-        <div style={ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }>
-          <a href="/strategic-design/files" style={ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block" }>
-            <div style={ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }>← PREVIOUS</div>
-            <div style={ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }>From pivot to 500 million users</div>
+            <div style={{ background: TAN_BG, padding: "60px 24px" }}>
+        <div style={{ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
+          <a href="/strategic-design/files" style={{ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block" }}>
+            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }}>← PREVIOUS</div>
+            <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }}>From pivot to 500 million users</div>
           </a>
-          <a href="/leadership" style={ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block", textAlign: "right" }>
-            <div style={ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }>NEXT →</div>
-            <div style={ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }>Design leadership</div>
+          <a href="/leadership" style={{ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block", textAlign: "right" }}>
+            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }}>NEXT →</div>
+            <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }}>Design leadership</div>
           </a>
         </div>
       </div>

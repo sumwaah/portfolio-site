@@ -391,15 +391,15 @@ export default function DesignLeadership() {
       </section>
 
       {/* Nav */}
-            <div style={ background: TAN_BG, padding: "60px 24px" }>
-        <div style={ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }>
-          <a href="/" style={ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block" }>
-            <div style={ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }>← CHAPTER 01</div>
-            <div style={ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }>Strategic design</div>
+            <div style={{ background: TAN_BG, padding: "60px 24px" }}>
+        <div style={{ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
+          <a href="/" style={{ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block" }}>
+            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }}>← CHAPTER 01</div>
+            <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }}>Strategic design</div>
           </a>
-          <a href="/foundation" style={ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block", textAlign: "right" }>
-            <div style={ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }>THE FOUNDATION →</div>
-            <div style={ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }>How I think</div>
+          <a href="/foundation" style={{ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block", textAlign: "right" }}>
+            <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }}>THE FOUNDATION →</div>
+            <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK }}>How I think</div>
           </a>
         </div>
       </div>
