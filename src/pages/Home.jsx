@@ -291,17 +291,63 @@ export default function Homepage() {
           marginTop: "8px",
         }}>
           <FadeIn delay={0.05}>
-            <ChapterCard
-              number="01"
-              title="Strategic design"
-              href="/strategic-design/gemini-india"
-              description="A decade of solving complex product and strategy problems through design — from AI product strategy in emerging markets to ecosystem architecture at the CEO level."
-              proofs={[
-                "Led AI product differentiation strategy for India — drove exponential growth",
-                "Drove design strategy for CEO-level cross-app ecosystem initiative",
-                "Files by Google: from pivot to 500M+ MAUs",
-              ]}
-            />
+            <div style={{
+              padding: "36px 32px",
+              background: WARM_BG,
+              borderRadius: "16px",
+              border: `1px solid ${TAN}`,
+            }}>
+              <div style={{
+                fontFamily: "'DM Mono', monospace",
+                fontSize: "12px",
+                color: POP,
+                letterSpacing: "0.08em",
+                marginBottom: "14px",
+                opacity: 0.8,
+              }}>01</div>
+              <h3 style={{
+                fontFamily: "'Instrument Serif', serif",
+                fontSize: "26px",
+                fontWeight: 400,
+                color: DARK,
+                margin: "0 0 12px",
+                lineHeight: 1.25,
+              }}>Strategic design</h3>
+              <p style={{
+                fontSize: "15px",
+                color: MID,
+                lineHeight: 1.7,
+                margin: "0 0 24px",
+              }}>
+                A decade of solving complex product and strategy problems through design — from AI product strategy in emerging markets to ecosystem architecture at the CEO level.
+              </p>
+              <div style={{ display: "flex", flexDirection: "column", gap: "0" }}>
+                {[
+                  { title: "Differentiating an AI product for a billion-person market", href: "/strategic-design/gemini-india" },
+                  { title: "Evolving a business model under regulatory pressure", href: "/strategic-design/search-regulation" },
+                  { title: "Designing an ecosystem, not just an app", href: "/strategic-design/ecosystem" },
+                  { title: "From pivot to 500 million users", href: "/strategic-design/files" },
+                  { title: "Connecting 100 million people to the internet", href: "/strategic-design/station" },
+                ].map((cs, i) => (
+                  <a key={i} href={cs.href} style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    padding: "14px 0",
+                    borderTop: i === 0 ? `1px solid ${TAN}` : "none",
+                    borderBottom: `1px solid ${TAN}`,
+                    textDecoration: "none",
+                    transition: "all 0.2s ease",
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.paddingLeft = "8px"}
+                  onMouseLeave={(e) => e.currentTarget.style.paddingLeft = "0"}
+                  >
+                    <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "12px", color: POP, flexShrink: 0 }}>→</span>
+                    <span style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "14px", color: DARK, lineHeight: 1.4 }}>{cs.title}</span>
+                  </a>
+                ))}
+              </div>
+            </div>
           </FadeIn>
 
           <FadeIn delay={0.15}>
@@ -595,7 +641,7 @@ export default function Homepage() {
             }}>
               sumier@gmail.com
             </a>
-            <a href="/" style={{
+            <a href="https://www.linkedin.com/in/sumier/" target="_blank" rel="noopener noreferrer" style={{
               display: "inline-flex",
               alignItems: "center",
               gap: "8px",
