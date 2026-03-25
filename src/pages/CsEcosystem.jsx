@@ -573,7 +573,7 @@ export default function CaseStudyEcosystem() {
 
         <FadeIn delay={0.1}>
           <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 20px" }}>
-            This isn't interface design. It's designing the conditions for an entire product ecosystem to work together — proposing new metrics, new incentives, new ways of working. The audience is the CEO. The artifacts are strategy presentations, not mockups.
+            This project is more than interface design. It's about designing the conditions for an entire product ecosystem to work together — proposing new metrics, new incentives, new ways of working. The audience is the CEO. The artifacts are strategy presentations to accelerate decision making and growing the strength of an entire ecosystem of apps.
           </p>
         </FadeIn>
 
