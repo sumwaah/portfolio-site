@@ -576,7 +576,7 @@ export default function CaseStudyEcosystem() {
             This project is more than interface design. It's about designing the conditions for an entire product ecosystem to work together — proposing new metrics, new incentives, new ways of working. The audience is the CEO. The artifacts are strategy presentations to accelerate decision making and growing the strength of an entire ecosystem of apps.
           </p>
         </FadeIn>
-
+        {/*}
         <FadeIn delay={0.15}>
           <p style={{
             fontSize: "16px",
@@ -588,6 +588,7 @@ export default function CaseStudyEcosystem() {
             If you're wondering what "I think in systems" looks like in practice — this is it.
           </p>
         </FadeIn>
+        */}
       </section>
 
       {/* Next / Prev */}
