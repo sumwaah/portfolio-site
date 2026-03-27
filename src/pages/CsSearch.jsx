@@ -26,21 +26,21 @@ const FadeIn = ({ children, delay = 0 }) => {
   );
 };
 
-const POP = "#D4552A"; const WARM_BG = "#FAF7F2"; const DARK = "#2C2416"; const MID = "#6B6155";
-const MUTED = "#8A7D6B"; const SUBTLE = "#B0A694"; const TAN = "#E8E2D9"; const TAN_BG = "#F0EBE3";
+const POP = "#c7A9a8"; const WARM_BG = "#476285"; const DARK = "#FFFFFF"; const MID = "#E0E8F0";
+const MUTED = "#C0CCD8"; const SUBTLE = "#A0B0C0"; const TAN = "#7A9ABB"; const TAN_BG = "rgba(255,255,255,0.12)";
 
 const Pill = ({ children }) => (
   <span style={{ display: "inline-block", padding: "4px 14px", borderRadius: "20px", fontSize: "12px", fontFamily: "'DM Mono', monospace", letterSpacing: "0.03em", background: TAN_BG, color: MUTED, marginRight: "8px", marginBottom: "8px" }}>{children}</span>
 );
 const StatCard = ({ number, label }) => (
-  <div style={{ padding: "28px 0", borderTop: `1px solid ${TAN}` }}>
+  <div style={{ padding: "28px 0", borderTop: `1px solid rgba(255,255,255,0.2)` }}>
     <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "42px", color: POP, lineHeight: 1.1, marginBottom: "6px" }}>{number}</div>
     <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "14px", color: MUTED, lineHeight: 1.5 }}>{label}</div>
   </div>
 );
 const ProcessStep = ({ number, title, description }) => (
   <div style={{ display: "flex", gap: "20px", alignItems: "flex-start", marginBottom: "36px" }}>
-    <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: DARK, color: WARM_BG, display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'DM Mono', monospace", fontSize: "13px", flexShrink: 0, marginTop: "2px" }}>{number}</div>
+    <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: "#c7A9a8", color: "#476285", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'DM Mono', monospace", fontSize: "13px", flexShrink: 0, marginTop: "2px" }}>{number}</div>
     <div>
       <div style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: "16px", color: DARK, marginBottom: "6px" }}>{title}</div>
       <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "15px", color: MID, lineHeight: 1.7 }}>{description}</div>
@@ -54,9 +54,9 @@ const PullQuote = ({ children }) => (
 );
 const Divider = () => (
   <div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "48px 0", gap: "12px" }}>
-    <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#D4C9B8" }} />
+    <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#7A9ABB" }} />
     <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: POP, opacity: 0.5 }} />
-    <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#D4C9B8" }} />
+    <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#7A9ABB" }} />
   </div>
 );
 const SectionLabel = ({ children }) => (
@@ -75,7 +75,7 @@ export default function CaseStudyDMA() {
     <div style={{ background: WARM_BG, minHeight: "100vh", fontFamily: "'DM Sans', sans-serif" }}>
       <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-      <nav style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(250,247,242,0.9)", backdropFilter: "blur(12px)", borderBottom: scrollY > 50 ? `1px solid ${TAN}` : "1px solid transparent", transition: "border-color 0.3s ease", padding: "16px 0" }}>
+      <nav style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(71,98,133,0.92)", backdropFilter: "blur(12px)", borderBottom: scrollY > 50 ? `1px solid ${TAN}` : "1px solid transparent", transition: "border-color 0.3s ease", padding: "16px 0" }}>
         <div style={{ maxWidth: "720px", margin: "0 auto", padding: "0 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <a href="/" style={{ fontFamily: "'DM Mono', monospace", fontSize: "13px", color: MUTED, textDecoration: "none", letterSpacing: "0.05em" }}onClick={() => window.location.href="/"}>← Back to all work</a>
           <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "12px", color: SUBTLE, letterSpacing: "0.06em" }}>SUMIER PHALAKE</span>
@@ -97,7 +97,7 @@ export default function CaseStudyDMA() {
           </p>
         </FadeIn>
         <FadeIn delay={0.3}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "10px 18px", background: "#EDE8DF", borderRadius: "8px", fontSize: "13px", color: MUTED, fontFamily: "'DM Mono', monospace" }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: "8px", padding: "10px 18px", background: "rgba(255,255,255,0.12)", borderRadius: "8px", fontSize: "13px", color: MUTED, fontFamily: "'DM Mono', monospace" }}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
             Confidential — approach and impact shared, not product details
           </div>
@@ -111,7 +111,7 @@ export default function CaseStudyDMA() {
       <section style={{ maxWidth: "720px", margin: "0 auto", padding: "60px 24px" }}>
         <FadeIn><SectionLabel>The challenge</SectionLabel></FadeIn>
         <FadeIn delay={0.05}>
-          <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: "28px", fontWeight: 400, color: DARK, lineHeight: 1.3, margin: "0 0 24px" }}>Three forces pulling in different directions</h2>
+          <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: "28px", fontWeight: 400, color: DARK, lineHeight: 1.3, margin: "0 0 24px" }}>Adapting to evolving user needs, AI driven experiences and a changing regulatory landscape</h2>
         </FadeIn>
         <FadeIn delay={0.1}>
           <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 20px" }}>
@@ -123,11 +123,7 @@ export default function CaseStudyDMA() {
             The design challenge was to find solutions that worked for all three constituencies at once — and to do it in a space where the rules were actively being rewritten.
           </p>
         </FadeIn>
-        <FadeIn delay={0.2}>
-          <PullQuote>
-            I knew the first tranche of ideas were unlikely to be fully successful. What mattered was building a system for continuous adaptation.
-          </PullQuote>
-        </FadeIn>
+
       </section>
 
       <Divider />
@@ -139,13 +135,7 @@ export default function CaseStudyDMA() {
             Design lead for a cross-functional engagement of about 10 people from my team — designers, researchers, and business operations — plus PMs, designers, and researchers from the product organization. I drove the plan, the sprint structure, and the deliverables.
           </p>
         </FadeIn>
-        <FadeIn delay={0.1}>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "28px" }}>
-            {["Design lead", "Sprint design", "Legal collaboration", "Solution design", "Program development"].map(s => (
-              <Pill key={s}>{s}</Pill>
-            ))}
-          </div>
-        </FadeIn>
+
       </section>
 
       <Divider />
@@ -160,7 +150,7 @@ export default function CaseStudyDMA() {
           </div>
         </FadeIn>
         <FadeIn delay={0.15}>
-          <div style={{ marginTop: "40px", padding: "28px 32px", background: TAN_BG, borderRadius: "12px", borderLeft: `3px solid ${POP}44` }}>
+          <div style={{ marginTop: "40px", padding: "28px 32px", background: TAN_BG, borderRadius: "12px", borderLeft: `3px solid rgba(199,169,168,0.5)` }}>
             <p style={{ fontSize: "15px", color: MID, lineHeight: 1.8, margin: 0 }}>
               The more lasting contribution was organizational: a repeatable model for rapid innovation in a highly constrained space. The team could keep adapting as regulations and AI capabilities evolved, rather than relying on one-time design sprints.
             </p>
@@ -177,42 +167,21 @@ export default function CaseStudyDMA() {
           <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: "28px", fontWeight: 400, color: DARK, lineHeight: 1.3, margin: "0 0 36px" }}>From sprint to system</h2>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <ProcessStep number="01" title="Massive global sprint"
-            description="Rapidly assembled a sprint bringing together people from legal — including external competition counsel — finance, product, and ads to develop a shared point of view on potential pathways, with end-to-end design solutions for each." />
+          <ProcessStep number="01" title="A complex, global sprint"
+            description="Assembled a sprint between 4 different product teams at Google — Finance, Search, Legal, Ads and also external counsel to develop a shared framework under which solutions could be developed that met the needs of all the players in the ecosystem." />
         </FadeIn>
         <FadeIn delay={0.15}>
           <ProcessStep number="02" title="Multiple viable solutions"
-            description="Developed a range of options rather than a single recommendation, recognizing that regulatory negotiations and user testing would shape the final direction. Each pathway had its own complete design solution." />
+            description="Developed a range of solutions, recognizing that regulatory negotiations and user testing would shape the final direction." />
         </FadeIn>
         <FadeIn delay={0.2}>
           <ProcessStep number="03" title="From solutions to system"
-            description="Beyond the immediate deliverables, helped the PM develop a program for a high-velocity skunkworks team — an ongoing engine for continuously generating, prototyping, and testing new approaches as regulations and AI capabilities evolved." />
+            description="Partnered with PM to develop a high-velocity skunkworks team — an incubator for continuously generating, prototyping and testing new solutions designed under this framework to learn and achieve product-market fit." />
         </FadeIn>
       </section>
-
-      <Divider />
 
       
-      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 80px" }}>
-        <FadeIn><SectionLabel>Why this matters</SectionLabel></FadeIn>
-        <FadeIn delay={0.05}>
-          <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: "28px", fontWeight: 400, color: DARK, lineHeight: 1.3, margin: "0 0 24px" }}>
-            Design at the intersection of{" "}<span style={{ color: POP, fontStyle: "italic" }}>experience, business, and policy</span>
-          </h2>
-        </FadeIn>
-        <FadeIn delay={0.1}>
-          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 20px" }}>
-            This is design in a space where user preference, ecosystem health, and legal compliance all compete. It shows the ability to hold competing forces in your head and find creative paths forward.
-          </p>
-        </FadeIn>
-        <FadeIn delay={0.15}>
-          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>
-            The instinct to build a lasting system — not just deliver solutions — echoes the incubator model from the leadership chapter.
-          </p>
-        </FadeIn>
-      </section>
-
-            <div style={{ background: TAN_BG, padding: "60px 24px" }}>
+      <div style={{ background: "#405877", padding: "60px 24px" }}>
         <div style={{ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
           <a href="/strategic-design/gemini-india" style={{ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block" }}>
             <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "8px" }}>← PREVIOUS</div>

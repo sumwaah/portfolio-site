@@ -27,14 +27,14 @@ const FadeIn = ({ children, delay = 0 }) => {
   );
 };
 
-const POP = "#D4552A";
-const WARM_BG = "#FAF7F2";
-const DARK = "#2C2416";
-const MID = "#6B6155";
-const MUTED = "#8A7D6B";
-const SUBTLE = "#B0A694";
-const TAN = "#E8E2D9";
-const TAN_BG = "#F0EBE3";
+const POP = "#c7A9a8";
+const WARM_BG = "#476285";
+const DARK = "#FFFFFF";
+const MID = "#E0E8F0";
+const MUTED = "#C0CCD8";
+const SUBTLE = "#A0B0C0";
+const TAN = "#7A9ABB";
+const TAN_BG = "rgba(255,255,255,0.12)";
 
 const Pill = ({ children }) => (
   <span style={{
@@ -45,7 +45,7 @@ const Pill = ({ children }) => (
 );
 
 const StatCard = ({ number, label }) => (
-  <div style={{ padding: "28px 0", borderTop: `1px solid ${TAN}` }}>
+  <div style={{ padding: "28px 0", borderTop: `1px solid rgba(255,255,255,0.2)` }}>
     <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "42px", color: POP, lineHeight: 1.1, marginBottom: "6px" }}>{number}</div>
     <div style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "14px", color: MUTED, lineHeight: 1.5 }}>{label}</div>
   </div>
@@ -54,7 +54,7 @@ const StatCard = ({ number, label }) => (
 const ProcessStep = ({ number, title, description }) => (
   <div style={{ display: "flex", gap: "20px", alignItems: "flex-start", marginBottom: "36px" }}>
     <div style={{
-      width: "36px", height: "36px", borderRadius: "50%", background: DARK, color: WARM_BG,
+      width: "36px", height: "36px", borderRadius: "50%", background: "#c7A9a8", color: "#476285",
       display: "flex", alignItems: "center", justifyContent: "center",
       fontFamily: "'DM Mono', monospace", fontSize: "13px", flexShrink: 0, marginTop: "2px",
     }}>{number}</div>
@@ -73,9 +73,9 @@ const PullQuote = ({ children }) => (
 
 const Divider = () => (
   <div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "48px 0", gap: "12px" }}>
-    <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#D4C9B8" }} />
+    <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#7A9ABB" }} />
     <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: POP, opacity: 0.5 }} />
-    <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#D4C9B8" }} />
+    <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#7A9ABB" }} />
   </div>
 );
 
@@ -99,7 +99,7 @@ export default function CaseStudyGemini() {
       <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
       <nav style={{
-        position: "sticky", top: 0, zIndex: 100, background: "rgba(250,247,242,0.9)",
+        position: "sticky", top: 0, zIndex: 100, background: "rgba(71,98,133,0.92)",
         backdropFilter: "blur(12px)", borderBottom: scrollY > 50 ? `1px solid ${TAN}` : "1px solid transparent",
         transition: "border-color 0.3s ease", padding: "16px 0",
       }}>
@@ -136,7 +136,7 @@ export default function CaseStudyGemini() {
         <FadeIn delay={0.3}>
           <div style={{
             display: "inline-flex", alignItems: "center", gap: "8px", padding: "10px 18px",
-            background: "#EDE8DF", borderRadius: "8px", fontSize: "13px", color: MUTED,
+            background: "rgba(255,255,255,0.12)", borderRadius: "8px", fontSize: "13px", color: MUTED,
             fontFamily: "'DM Mono', monospace",
           }}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -156,7 +156,7 @@ export default function CaseStudyGemini() {
         <FadeIn><SectionLabel>The challenge</SectionLabel></FadeIn>
         <FadeIn delay={0.05}>
           <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: "28px", fontWeight: 400, color: DARK, lineHeight: 1.3, margin: "0 0 24px" }}>
-            No clear reason to choose it
+            A product and go to market strategy for India
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
@@ -164,11 +164,7 @@ export default function CaseStudyGemini() {
             One of Google's major AI products needed a differentiated growth strategy for India — the world's largest and most diverse internet market. The product had no clear value proposition that resonated with local users. This was simultaneously a product differentiation problem, a localization challenge, and a go-to-market strategy question.
           </p>
         </FadeIn>
-        <FadeIn delay={0.15}>
-          <PullQuote>
-            When your engineer is sitting in someone's living room watching them struggle with your product, the conversations back at the office change.
-          </PullQuote>
-        </FadeIn>
+
       </section>
 
       <Divider />
@@ -181,13 +177,7 @@ export default function CaseStudyGemini() {
             I drove the entire engagement end-to-end — assembling and leading a cross-functional team of around 20 people spanning design, research, product, engineering, marketing, and business operations from both my team and the product team.
           </p>
         </FadeIn>
-        <FadeIn delay={0.1}>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "6px", marginTop: "28px" }}>
-            {["Engagement lead", "Research design", "Team assembly", "Solution design", "Opportunity sizing"].map(s => (
-              <Pill key={s}>{s}</Pill>
-            ))}
-          </div>
-        </FadeIn>
+
       </section>
 
       <Divider />
@@ -202,7 +192,7 @@ export default function CaseStudyGemini() {
           </div>
         </FadeIn>
         <FadeIn delay={0.15}>
-          <div style={{ marginTop: "40px", padding: "28px 32px", background: TAN_BG, borderRadius: "12px", borderLeft: `3px solid ${POP}44` }}>
+          <div style={{ marginTop: "40px", padding: "28px 32px", background: TAN_BG, borderRadius: "12px", borderLeft: `3px solid rgba(255,208,160,0.5)` }}>
             <p style={{ fontSize: "15px", color: MID, lineHeight: 1.8, margin: 0 }}>
               While the product's growth came from many efforts, ours helped accelerate it and showed clear impact. What I'm confident in is the rigor of the approach: quantitative audience analysis, qualitative field research, collaborative solution design, and business-ready recommendations, all delivered in a few months.
             </p>
@@ -224,48 +214,27 @@ export default function CaseStudyGemini() {
 
         <FadeIn delay={0.1}>
           <ProcessStep number="01" title="Data-led audience identification"
-            description="Partnered with business operations to analyze existing research and usage data, mapping top use cases against user demographics. We identified which audience segment had the highest growth potential — users who were sizable, already AI-curious, and had needs AI could meaningfully address." />
+            description="Analyzed existing research and usage data with business operations to identify the audience with highest growth potential — users who were sizable, AI-curious and had needs AI could meaningfully address." />
         </FadeIn>
         <FadeIn delay={0.15}>
           <ProcessStep number="02" title="Deep field research in Bangalore"
-            description="Led a team to Bangalore for in-home interviews and street intercepts with a diverse set of users from our target audience. Worked with local research agencies for translation and recruitment. Organized research so the entire cross-functional team — designers, PMs, engineers — participated in the field." />
+            description="Led a cross-functional team of PMs, Engineers, Business Operations and UXers in Bangalore to participate in foundational field research with users from our target audience." />
         </FadeIn>
         <FadeIn delay={0.2}>
           <ProcessStep number="03" title="Co-creation with local context"
-            description="Developed solutions collaboratively with the team and with local design students, ensuring cultural and contextual accuracy. We didn't design for users from afar — we designed with them." />
+            description="We designed with not just for our users. We developed solutions collaboratively with the team and with local design students, ensuring cultural and contextual grounding." />
         </FadeIn>
         <FadeIn delay={0.25}>
           <ProcessStep number="04" title="Tangible, sized recommendations"
-            description="Delivered visual mockups, motion prototypes, and opportunity sizing with engineering complexity scores. We gave leadership a clear pathway: who to focus on, what they need, how to build it, and how big the opportunity is." />
+            description="Delivered visual and motion prototypes of solutions as well as marketing campaign recommendations with opportunity sizing and engineering complexity scores to leadership, giving them a detailed playbook to succeed in the market." />
         </FadeIn>
       </section>
 
       <Divider />
 
-      {/* Impact */}
       
-      {/* Why this matters */}
-      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 80px" }}>
-        <FadeIn><SectionLabel>Why this matters</SectionLabel></FadeIn>
-        <FadeIn delay={0.05}>
-          <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: "28px", fontWeight: 400, color: DARK, lineHeight: 1.3, margin: "0 0 24px" }}>
-            Full-stack{" "}<span style={{ color: POP, fontStyle: "italic" }}>strategic design</span>
-          </h2>
-        </FadeIn>
-        <FadeIn delay={0.1}>
-          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 20px" }}>
-            This engagement demonstrates the full arc of strategic design work: quantitative audience analysis, qualitative field research, collaborative solution design, and business-ready recommendations — all delivered end-to-end in a few months with a large cross-functional team.
-          </p>
-        </FadeIn>
-        <FadeIn delay={0.15}>
-          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>
-            The same deep-user-understanding muscle I built in NBU, now applied to AI product strategy at a massive scale.
-          </p>
-        </FadeIn>
-      </section>
-
       {/* Nav */}
-            <div style={{ background: TAN_BG, padding: "60px 24px" }}>
+            <div style={{ background: "#405877", padding: "60px 24px" }}>
         <div style={{ maxWidth: "720px", margin: "0 auto", display: "grid", gridTemplateColumns: "1fr 1fr", gap: "24px" }}>
           <div />
           <a href="/strategic-design/search-regulation" style={{ textDecoration: "none", padding: "28px", background: WARM_BG, borderRadius: "12px", border: `1px solid ${TAN}`, display: "block", textAlign: "right" }}>
