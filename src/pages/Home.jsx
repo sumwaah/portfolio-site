@@ -52,6 +52,7 @@ const CaseStudyRow = ({ href, image, number, title, description, accent, imagePo
   return (
     <a
       href={href}
+      className="case-study-row"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
@@ -66,7 +67,7 @@ const CaseStudyRow = ({ href, image, number, title, description, accent, imagePo
         transform: hovered ? "translateX(4px)" : "translateX(0)",
       }}
     >
-      <div style={{
+      <div className="case-study-thumb" style={{
         borderRadius: "12px",
         overflow: "hidden",
         aspectRatio: "4/3",
@@ -130,6 +131,17 @@ export default function SimplePortfolio() {
     <div style={{ background: "linear-gradient(180deg, #F5F8FB 0%, #D6DFEB 100%)", minHeight: "100vh", fontFamily: "'DM Sans', sans-serif" }}>
       <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
+
+      <style dangerouslySetInnerHTML={{ __html: `
+        @media (max-width: 640px) {
+          .hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
+          .hero-photo { order: -1 !important; width: 160px !important; height: 200px !important; margin-top: 0 !important; }
+          .case-study-row { grid-template-columns: 1fr !important; gap: 16px !important; }
+          .case-study-thumb { aspect-ratio: 16/9 !important; }
+          .about-grid { grid-template-columns: 1fr !important; }
+        }
+      `}} />
+
       {/* Nav */}
       <nav style={{
         position: "sticky", top: 0, zIndex: 100,
@@ -149,7 +161,7 @@ export default function SimplePortfolio() {
 
       {/* Hero */}
       <header style={{ maxWidth: "800px", margin: "0 auto", padding: "80px 32px 60px" }}>
-        <div style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "48px", alignItems: "start" }}>
+        <div className="hero-grid" style={{ display: "grid", gridTemplateColumns: "1fr auto", gap: "48px", alignItems: "start" }}>
           <div>
             <FadeIn>
               <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "12px", color: SUBTLE, letterSpacing: "0.1em", marginBottom: "28px" }}>
@@ -261,7 +273,7 @@ export default function SimplePortfolio() {
           }}>About</div>
         </FadeIn>
 
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "40px", alignItems: "start" }}>
+        <div className="about-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))", gap: "40px", alignItems: "start" }}>
           <FadeIn delay={0.05}>
             <div>
               <h2 style={{
