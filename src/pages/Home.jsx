@@ -134,8 +134,11 @@ export default function SimplePortfolio() {
 
       <style dangerouslySetInnerHTML={{ __html: `
         @media (max-width: 640px) {
-          .hero-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
-          .hero-photo { order: -1 !important; width: 160px !important; height: 200px !important; margin-top: 0 !important; }
+          .hero-grid { display: flex !important; flex-direction: column !important; gap: 0 !important; }
+          .hero-photo { width: 160px !important; height: 200px !important; margin-top: 16px !important; margin-bottom: 24px !important; }
+          .hero-text-left { order: 1 !important; }
+          .hero-photo-wrap { order: 2 !important; }
+          .hero-positioning { order: 3 !important; }
           .case-study-row { grid-template-columns: 1fr !important; gap: 16px !important; }
           .case-study-thumb { aspect-ratio: 16/9 !important; }
           .about-grid { grid-template-columns: 1fr !important; }
