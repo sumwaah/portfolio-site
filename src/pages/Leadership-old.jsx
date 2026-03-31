@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 
+
 import IMG_TEAM_SINGAPORE from "../assets/leadership/IMG_TEAM_SINGAPORE.png";
 import IMG_TEAM_CANDID from "../assets/leadership/IMG_TEAM_CANDID.png";
 import IMG_TEAM_WORKSHOP from "../assets/leadership/IMG_TEAM_WORKSHOP.png";
@@ -33,14 +34,14 @@ const FadeIn = ({ children, delay = 0 }) => {
 
 const GREEN = "#5C8A6E";
 const GREEN_LIGHT = "#EEF4F0";
-const POP = "#F374AE";
-const WARM_BG = "#F0F3F7";
+const POP = "#D4552A";
+const WARM_BG = "#FAF7F2";
 const DARK = "#2C2416";
 const MID = "#6B6155";
-const MUTED = "#7A8494";
-const SUBTLE = "#A0AAB8";
-const TAN = "#DEE3EA";
-const TAN_BG = "#E6EBF1";
+const MUTED = "#8A7D6B";
+const SUBTLE = "#B0A694";
+const TAN = "#E8E2D9";
+const TAN_BG = "#F0EBE3";
 
 
 const Img = ({ src, alt, caption }) => (
@@ -67,9 +68,9 @@ const PullQuote = ({ children }) => (
 
 const Divider = () => (
   <div style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "48px 0", gap: "12px" }}>
-    <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#DEE3EA" }} />
+    <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#D4C9B8" }} />
     <div style={{ width: "4px", height: "4px", borderRadius: "50%", background: GREEN, opacity: 0.5 }} />
-    <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#DEE3EA" }} />
+    <div style={{ width: "6px", height: "6px", borderRadius: "50%", background: "#D4C9B8" }} />
   </div>
 );
 
@@ -116,10 +117,10 @@ export default function DesignLeadership() {
   }, []);
 
   return (
-    <div style={{ background: "linear-gradient(180deg, #F5F8FB 0%, #D6DFEB 100%)", minHeight: "100vh", fontFamily: "'DM Sans', sans-serif" }}>
+    <div style={{ background: WARM_BG, minHeight: "100vh", fontFamily: "'DM Sans', sans-serif" }}>
       <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-      <nav style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(245,248,251,0.9)", backdropFilter: "blur(12px)", borderBottom: scrollY > 50 ? `1px solid ${TAN}` : "1px solid transparent", transition: "border-color 0.3s ease", padding: "16px 0" }}>
+      <nav style={{ position: "sticky", top: 0, zIndex: 100, background: "rgba(250,247,242,0.9)", backdropFilter: "blur(12px)", borderBottom: scrollY > 50 ? `1px solid ${TAN}` : "1px solid transparent", transition: "border-color 0.3s ease", padding: "16px 0" }}>
         <div style={{ maxWidth: "720px", margin: "0 auto", padding: "0 24px", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
           <a href="/" style={{ fontFamily: "'DM Mono', monospace", fontSize: "13px", color: MUTED, textDecoration: "none", letterSpacing: "0.05em" }}onClick={() => window.location.href="/"}>← Back home</a>
           <span style={{ fontFamily: "'DM Mono', monospace", fontSize: "12px", color: SUBTLE, letterSpacing: "0.06em" }}>SUMIER PHALAKE</span>
@@ -143,10 +144,14 @@ export default function DesignLeadership() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <p style={{ fontSize: "18px", color: MID, lineHeight: 1.7, margin: "0 0 0", maxWidth: "600px" }}>
-            I build tight knit teams with a culture that encourages creative risks, a high level of craft with a sharp focus on the user As Head of Design at Google's Next Billion Users, I managed the design org, but I also co-led a 150 person cross-functional organization with the Heads of Business, Engineering and Product
+            I build teams, design processes, and cultivate the culture that can take ideas to successful launches with a focus on craft and user value. As Head of Design at Google's Next Billion Users, I didn't just manage a design org — I co-led an entire 150-person cross-functional organization and redesigned how it developed products from the ground up.
           </p>
         </FadeIn>
       </header>
+
+      <div style={{ maxWidth: "720px", margin: "0 auto", padding: "0 24px" }}>
+        <div style={{ height: "1px", background: `linear-gradient(to right, ${GREEN}44, transparent 70%)` }} />
+      </div>
 
       {/* Stats overview */}
       <section style={{ maxWidth: "720px", margin: "0 auto", padding: "60px 24px" }}>
@@ -160,21 +165,32 @@ export default function DesignLeadership() {
         </FadeIn>
       </section>
 
+      <Divider />
+
       {/* NBU 2.0 */}
       <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
         <FadeIn><SectionLabel>Organizational design</SectionLabel></FadeIn>
         <FadeIn delay={0.05}>
           <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: "28px", fontWeight: 400, color: DARK, lineHeight: 1.3, margin: "0 0 24px" }}>
-            Designing an incubator model for the organization
+            Redesigning how an organization works
           </h2>
         </FadeIn>
         <FadeIn delay={0.1}>
           <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 20px" }}>
-            At NBU, we were investing too many resources in unproven product hypotheses and taking too long to learn and fail. Identifying an opportunity to increase our efficiency, I partnered with my Head of Research, PM and ProdOps to drive a new end-to-end product development process.
+            NBU had a problem that a lot of innovation teams face: we were investing too many resources in unproven product hypotheses and taking too long to fail. Every product got the same level of investment regardless of how validated it was. Teams spent months building things that should have been killed in weeks.
+          </p>
+        </FadeIn>
+        <FadeIn delay={0.15}>
+          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 20px" }}>
+            Together with my Head of UX Research partner, I developed a new product process in close collaboration with PM and ProdOps. We didn't tweak the existing model — we replaced it.
           </p>
         </FadeIn>
 
-
+        <FadeIn delay={0.2}>
+          <PullQuote>
+            Failure at any stage creates the space to kick off a new seed team. Failure is not wasted — it's fuel.
+          </PullQuote>
+        </FadeIn>
       </section>
 
       {/* The model */}
@@ -223,65 +239,64 @@ export default function DesignLeadership() {
 
       <Divider />
 
-      {/* Leadership dimensions */}
-      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 40px" }}>
+      {/* Team building */}
+      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
         <FadeIn><SectionLabel>Team building</SectionLabel></FadeIn>
-        <FadeIn delay={0.02}>
+        <FadeIn delay={0.05}>
           <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: "28px", fontWeight: 400, color: DARK, lineHeight: 1.3, margin: "0 0 24px" }}>
             A globally distributed,{" "}<span style={{ color: GREEN, fontStyle: "italic" }}>mission-driven</span>{" "}UX org
           </h2>
         </FadeIn>
-        <FadeIn>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "16px" }}>
-            <PhaseCard
-              phase="01"
-              title="Leading multidisciplinary teams"
-              description="Built a 35-person UX team from the ground up — designers, researchers, program managers, prototypers — distributed across the US, India and other locations. 18 reported directly to me."
-            />
-            <PhaseCard
-              phase="02"
-              title="Scaling our impact"
-              description="We learned a lot from our pioneering research and design for global emerging markets. We made sure we scale our impact by creating frameworks, running workshops and sharing research reports and talks with other Google teams."
-            />
+        <FadeIn delay={0.1}>
+          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 20px" }}>
+            I built a UX team of 35 from the ground up — designers, researchers, program managers, visual designers, prototypers — distributed across the US, India, and other locations. 18 reported directly to me.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.15}>
+          <div style={{ margin: "36px 0" }}>
+            <Img src={IMG_TEAM_WORKSHOP} alt="NBU team during a workshop in India" caption="The NBU team during a design sprint in Bangalore — sticky notes, whiteboards, and cross-functional collaboration" />
           </div>
         </FadeIn>
-        <FadeIn delay={0.1}>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "16px", marginTop: "16px" }}>
-            <PhaseCard
-              phase="03"
-              title="Growing careers"
-              description="I coached my team into senior leads and managers. My people manager scores were consistently above 90%. But what I'm prouder of is the careers — the people who grew into leaders themselves."
-            />
-            <PhaseCard
-              phase="04"
-              title="Psychological safety"
-              description="Creating an environment where people feel supported enough to take calculated risks. Not so comfortable that people coast, not so stressful that people retreat."
-            />
-          </div>
+
+        <FadeIn delay={0.2}>
+          <PullQuote>
+            I don't hire for culture fit — I hire for culture add. Every person on the team brought something the rest of us didn't have.
+          </PullQuote>
+        </FadeIn>
+
+        <FadeIn delay={0.2}>
+          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 20px" }}>
+            Together, the team launched over a dozen 0-to-1 products. One reached 500M+ MAUs. Several others reached 10M+. We had a mission-driven culture that was deeply user-focused, and we were effective at balancing user needs with business goals — which is often where design teams struggle most.
+          </p>
+        </FadeIn>
+
+        <FadeIn delay={0.25}>
+          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 0" }}>
+            Beyond our own products, I made sure our learnings scaled. We ran engagement workshops with teams across Google, built a case study library cataloguing what worked and what failed, and created tools that helped other teams analyze and target their users more effectively.
+          </p>
         </FadeIn>
       </section>
 
-      {/* Podcast */}
-      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "0 24px 40px" }}>
-        <FadeIn>
-          <a href="https://whatisux.co/podcast/s5e4-how-google-designs-for-the-next-billion-users-with-sumier-phalake/" target="_blank" rel="noopener noreferrer" style={{
-            display: "flex", alignItems: "center", gap: "20px",
-            padding: "24px 28px", background: TAN_BG, borderRadius: "12px",
-            border: `1px solid ${TAN}`, textDecoration: "none",
-            transition: "all 0.3s ease",
-          }}>
-            <div style={{
-              width: "48px", height: "48px", borderRadius: "50%",
-              background: GREEN, color: "#fff",
-              display: "flex", alignItems: "center", justifyContent: "center",
-              flexShrink: 0, fontSize: "20px",
-            }}>▶</div>
-            <div>
-              <div style={{ fontFamily: "'DM Mono', monospace", fontSize: "11px", color: MUTED, letterSpacing: "0.08em", marginBottom: "6px" }}>WHAT IS UX PODCAST</div>
-              <div style={{ fontFamily: "'Instrument Serif', serif", fontSize: "18px", color: DARK, lineHeight: 1.3 }}>How Google Designs for the Next Billion Users</div>
-              <div style={{ fontSize: "13px", color: MUTED, marginTop: "4px" }}>Hear me talk about the work our team accomplished together</div>
-            </div>
-          </a>
+      <Divider />
+
+      {/* Culture & people */}
+      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 60px" }}>
+        <FadeIn><SectionLabel>Culture & people</SectionLabel></FadeIn>
+        <FadeIn delay={0.05}>
+          <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: "28px", fontWeight: 400, color: DARK, lineHeight: 1.3, margin: "0 0 24px" }}>
+            Growing leaders
+          </h2>
+        </FadeIn>
+        <FadeIn delay={0.1}>
+          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 20px" }}>
+            I coached and mentored my team into senior leads and managers. My people manager scores were consistently above 90%. But scores are just numbers — what I'm prouder of is the careers.
+          </p>
+        </FadeIn>
+        <FadeIn delay={0.15}>
+          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 20px" }}>
+            I believe in creating an environment of psychological safety where people feel supported enough to take calculated risks. That's the sweet spot for growth: not so comfortable that people coast, not so stressful that people retreat to what's safe. I provide guidance and air cover, but I expect people to stretch.
+          </p>
         </FadeIn>
       </section>
 
@@ -289,8 +304,89 @@ export default function DesignLeadership() {
       <section style={{ maxWidth: "720px", margin: "0 auto", padding: "0 24px 40px" }}>
         <FadeIn>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "16px" }}>
-            <Img src={IMG_TEAM_WORKSHOP} alt="NBU team during a workshop in India" caption="Design sprint in Bangalore" />
-            <Img src={IMG_TEAM_SINGAPORE} alt="NBU team in Singapore" caption="Team offsite in Singapore" />
+            <Img src={IMG_TEAM_SINGAPORE} alt="NBU team in Singapore" caption="Team offsite in Singapore — the tight-knit culture wasn't accidental" />
+            <Img src={IMG_TEAM_CANDID} alt="Team members laughing together" caption="The relationships that make great work possible" />
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* Beliefs */}
+      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "0 24px 60px" }}>
+        <FadeIn>
+          <div style={{
+            padding: "36px 32px",
+            background: GREEN_LIGHT,
+            borderRadius: "16px",
+          }}>
+            <div style={{
+              fontFamily: "'DM Mono', monospace", fontSize: "11px", color: GREEN,
+              letterSpacing: "0.1em", marginBottom: "24px", opacity: 0.8,
+            }}>WHAT I'VE LEARNED MATTERS MOST</div>
+
+            <BeliefItem
+              title="People not products."
+              text="If you invest in your people's growth, the products take care of themselves."
+            />
+            <BeliefItem
+              title="Strong opinions weakly held."
+              text="Have passionate convictions, but listen. Accept good arguments. Disagree and commit."
+            />
+            <BeliefItem
+              title="Break down silos."
+              text="Get interested in business, in engineering, in operations. The designers who develop cross-functional acumen are the ones who earn real influence."
+            />
+            <BeliefItem
+              title="Trust and respect."
+              text="Assume good intent. Communicate respectfully. Be willing to learn from anyone."
+            />
+          </div>
+        </FadeIn>
+      </section>
+
+      <Divider />
+
+      {/* Why this matters */}
+      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "20px 24px 80px" }}>
+        <FadeIn><SectionLabel>Why this matters</SectionLabel></FadeIn>
+        <FadeIn delay={0.05}>
+          <h2 style={{ fontFamily: "'Instrument Serif', serif", fontSize: "28px", fontWeight: 400, color: DARK, lineHeight: 1.3, margin: "0 0 24px" }}>
+            I don't just manage teams —{" "}<span style={{ color: GREEN, fontStyle: "italic" }}>I design organizations</span>
+          </h2>
+        </FadeIn>
+        <FadeIn delay={0.1}>
+          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: "0 0 20px" }}>
+            The NBU 2.0 incubator model. The culture principles. The scaling programs. These aren't management activities — they're design work applied to organizations. The same instinct that drives my product strategy work — start with the real problem, build frameworks for clarity, iterate until it works — is what I bring to teams and culture.
+          </p>
+        </FadeIn>
+        <FadeIn delay={0.15}>
+          <p style={{ fontSize: "16px", color: MID, lineHeight: 1.8, margin: 0, fontStyle: "italic" }}>
+            The best evidence isn't the products we shipped. It's the people who grew into leaders themselves.
+          </p>
+        </FadeIn>
+      </section>
+
+      {/* Testimonials placeholder */}
+      <section style={{ maxWidth: "720px", margin: "0 auto", padding: "0 24px 60px" }}>
+        <FadeIn>
+          <div style={{
+            padding: "40px 32px",
+            background: TAN_BG,
+            borderRadius: "16px",
+            textAlign: "center",
+          }}>
+            <div style={{
+              fontFamily: "'DM Mono', monospace", fontSize: "11px", color: SUBTLE,
+              letterSpacing: "0.1em", marginBottom: "16px",
+            }}>TESTIMONIALS</div>
+            <p style={{
+              fontFamily: "'Instrument Serif', serif", fontSize: "20px",
+              color: MUTED, fontStyle: "italic", margin: "0 0 8px", lineHeight: 1.5,
+            }}>
+              "Quotes from colleagues and reports coming soon."
+            </p>
+            <p style={{ fontSize: "13px", color: SUBTLE, margin: 0 }}>
+              Reach out if you'd like to speak directly with people I've worked with.
+            </p>
           </div>
         </FadeIn>
       </section>
