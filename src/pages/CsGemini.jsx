@@ -2,7 +2,7 @@
 // Differentiating an AI product for a billion-person market.
 
 import { Page, Cover, Meta, Impact, Section, Steps, PrevNext, Footer, FadeIn,
-  ACCENT, MUTED, MONO } from "./_swiss";
+  ACCENT, MUTED, MONO } from "./_swiss.jsx";
 
 export default function CsGemini() {
   return (

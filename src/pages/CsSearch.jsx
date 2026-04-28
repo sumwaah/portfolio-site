@@ -2,7 +2,7 @@
 // Evolving a business model under regulatory pressure.
 
 import { Page, Cover, Meta, Impact, Section, Steps, PrevNext, Footer,
-  ACCENT, MUTED, MONO } from "./_swiss";
+  ACCENT, MUTED, MONO } from "./_swiss.jsx";
 
 export default function CsSearch() {
   return (

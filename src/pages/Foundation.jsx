@@ -5,7 +5,7 @@ import IMG_NBU_SHOP  from "../assets/foundation/IMG_NBU_SHOP.png";
 import IMG_NBU_TRAIN from "../assets/foundation/IMG_NBU_TRAIN.png";
 
 import { Page, Cover, Section, Quote, PrevNext, Footer, FadeIn,
-  ACCENT, INK, HAIR, FAINT, MUTED, MONO, SANS } from "./_swiss";
+  ACCENT, INK, HAIR, FAINT, MUTED, MONO, SANS } from "./_swiss.jsx";
 
 function Plate({ src, alt, caption }) {
   return (

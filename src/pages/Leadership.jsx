@@ -5,7 +5,7 @@ import IMG_TEAM_SINGAPORE from "../assets/leadership/IMG_TEAM_SINGAPORE.png";
 import IMG_TEAM_WORKSHOP from "../assets/leadership/IMG_TEAM_WORKSHOP.png";
 
 import { Page, Cover, Meta, Impact, Section, PrevNext, Footer, FadeIn,
-  ACCENT, INK, HAIR, FAINT, MUTED, MONO, SANS } from "./_swiss";
+  ACCENT, INK, HAIR, FAINT, MUTED, MONO, SANS } from "./_swiss.jsx";
 
 function Phase({ tag, title, body }) {
   return (

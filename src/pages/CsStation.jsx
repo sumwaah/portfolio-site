@@ -10,7 +10,7 @@ import IMG_THAI     from "../assets/cs-station/IMG_THAI.png";
 import IMG_CONSOLE  from "../assets/cs-station/IMG_CONSOLE.png";
 
 import { Page, Cover, Meta, Impact, Section, Quote, PrevNext, Footer, FadeIn,
-  ACCENT, INK, HAIR, FAINT, MUTED, MONO } from "./_swiss";
+  ACCENT, INK, HAIR, FAINT, MUTED, MONO } from "./_swiss.jsx";
 
 function Plate({ src, alt, caption, dark = false }) {
   return (

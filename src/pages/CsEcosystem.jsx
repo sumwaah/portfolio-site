@@ -2,7 +2,7 @@
 // Designing an ecosystem, not just an app.
 
 import { Page, Cover, Meta, Impact, Section, Steps, Quote, PrevNext, Footer,
-  ACCENT, INK, HAIR, MUTED, MONO } from "./_swiss";
+  ACCENT, INK, HAIR, MUTED, MONO } from "./_swiss.jsx";
 
 // Minimal connected-nodes diagram, restyled in Swiss vocabulary.
 function EcosystemDiagram() {
