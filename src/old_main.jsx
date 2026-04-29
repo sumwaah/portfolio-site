@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import CsGemini from './pages/CsGemini';
@@ -12,8 +12,8 @@ import Leadership from './pages/Leadership';
 import Foundation from './pages/Foundation';
 
 function ScrollToTop() {
-  const { pathname } = useLocation();
-  useEffect(() => {
+  const { pathname } = window.location;
+  React.useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
   return null;

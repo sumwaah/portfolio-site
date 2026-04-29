@@ -1,23 +1,12 @@
-import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+
+import { FadeIn, PAPER, INK, ACCENT, MUTED, FAINT, HAIR, SANS, SERIF, MONO } from "./_swiss.jsx";
 
 import IMG_HERO  from "../assets/home/IMG_HERO.png";
 import IMG_TRAIN from "../assets/home/IMG_TRAIN.png";
 import IMG_SHOP  from "../assets/home/IMG_SHOP.png";
 import IMG_FILES from "../assets/home/IMG_FILES.png";
 import IMG_TEAM  from "../assets/home/IMG_TEAM.png";
-
-// ── Swiss Editorial v2 — Option A (Refined Classic)
-const PAPER  = "#FAFAF7";
-const INK    = "#0A0A0A";
-const ACCENT = "#E8443C";
-const MUTED  = "#5A5A5A";
-const FAINT  = "#E5E2DA";
-const HAIR   = "#C8C4B8";
-
-const SANS  = "'Inter Tight', 'Helvetica Neue', Arial, sans-serif";
-const SERIF = "'Times New Roman', Times, serif";
-const MONO  = "'JetBrains Mono', 'IBM Plex Mono', monospace";
 
 // ── Content
 const PROJECTS = [
@@ -76,35 +65,7 @@ const BELIEFS = [
   { title: "Culture is a design problem", body: "It happens whether you work on it or not. Great leaders design it intentionally." },
 ];
 
-// ── Reveal-on-scroll helpers
-const useInView = (threshold = 0.12) => {
-  const ref = useRef(null);
-  const [visible, setVisible] = useState(false);
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([e]) => { if (e.isIntersecting) { setVisible(true); obs.unobserve(el); } },
-      { threshold }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
-  }, [threshold]);
-  return [ref, visible];
-};
-
-const FadeIn = ({ children, delay = 0 }) => {
-  const [ref, visible] = useInView();
-  return (
-    <div ref={ref} style={{
-      opacity: visible ? 1 : 0,
-      transform: visible ? "translateY(0)" : "translateY(24px)",
-      transition: `opacity 0.8s cubic-bezier(0.25,0.46,0.45,0.94) ${delay}s, transform 0.8s cubic-bezier(0.25,0.46,0.45,0.94) ${delay}s`,
-    }}>{children}</div>
-  );
-};
-
-// ── Reusable nav
+// ── Home-specific nav (uses anchor links, not router Links)
 function Nav() {
   return (
     <div style={{
