@@ -162,6 +162,7 @@ export function Impact({ stats, label = "Impact" }) {
     <div style={{
       padding: "48px 56px", borderBottom: `1px solid ${INK}`,
       display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
+      alignItems: "start",
     }}>
       <div style={{ gridColumn: "span 3" }}>
         <h2 style={{
@@ -175,7 +176,9 @@ export function Impact({ stats, label = "Impact" }) {
             <FadeIn key={i} delay={i * 0.05}>
               <div style={{
                 display: "grid", gridTemplateColumns: "1fr 280px",
-                alignItems: "start", padding: "28px 0",
+                alignItems: "start",
+                paddingTop: i === 0 ? 0 : "28px",
+                paddingBottom: "28px",
                 borderBottom: i < stats.length - 1 ? `1px solid ${HAIR}` : "none", gap: "32px",
               }}>
                 <div style={{
