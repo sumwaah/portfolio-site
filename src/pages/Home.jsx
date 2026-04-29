@@ -127,7 +127,7 @@ export default function Home() {
           <div style={{
             gridColumn: "span 4",
             display: "flex", flexDirection: "column", justifyContent: "flex-start",
-            paddingTop: "96px",
+            paddingTop: "40px",
           }}>
             <img src={IMG_HERO} alt="Sumier" style={{ width: "100%", display: "block" }} />
           </div>
