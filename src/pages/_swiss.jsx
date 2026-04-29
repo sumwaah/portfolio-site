@@ -160,7 +160,7 @@ export function Meta({ items }) {
 export function Impact({ stats, label = "Impact" }) {
   return (
     <div style={{
-      padding: "80px 56px", borderBottom: `1px solid ${INK}`,
+      padding: "48px 56px", borderBottom: `1px solid ${INK}`,
       display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
     }}>
       <div style={{ gridColumn: "span 3" }}>
@@ -170,15 +170,14 @@ export function Impact({ stats, label = "Impact" }) {
         }}>{label}</h2>
       </div>
       <div style={{ gridColumn: "span 9" }}>
-        <div style={{ borderTop: `1px solid ${INK}` }}>
+        <div>
           {stats.map((s, i) => (
             <FadeIn key={i} delay={i * 0.05}>
               <div style={{
-                display: "grid", gridTemplateColumns: "60px 1fr 280px",
+                display: "grid", gridTemplateColumns: "1fr 280px",
                 alignItems: "baseline", padding: "28px 0",
-                borderBottom: `1px solid ${HAIR}`, gap: "32px",
+                borderBottom: i < stats.length - 1 ? `1px solid ${HAIR}` : "none", gap: "32px",
               }}>
-                <div style={{ fontFamily: MONO, fontSize: "12px", color: MUTED }}>0{i + 1}</div>
                 <div style={{
                   fontFamily: SANS, fontFeatureSettings: "'tnum' 1, 'lnum' 1",
                   fontWeight: 500, letterSpacing: "-0.04em", lineHeight: 0.9,
