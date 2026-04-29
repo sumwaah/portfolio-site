@@ -135,7 +135,7 @@ export default function Home() {
       </FadeIn>
 
       {/* INDEX / SELECTED WORK */}
-      <div id="work" style={{ padding: "72px 56px 0", borderBottom: `1px solid ${INK}` }}>
+      <div id="work" style={{ padding: "48px 56px 0", borderBottom: `1px solid ${INK}` }}>
         <FadeIn>
           <div style={{ marginBottom: "24px" }}>
             <div style={{ fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em" }}>
