@@ -175,13 +175,12 @@ export function Impact({ stats, label = "Impact" }) {
             <FadeIn key={i} delay={i * 0.05}>
               <div style={{
                 display: "grid", gridTemplateColumns: "1fr 280px",
-                alignItems: "baseline", padding: "28px 0",
+                alignItems: "start", padding: "28px 0",
                 borderBottom: i < stats.length - 1 ? `1px solid ${HAIR}` : "none", gap: "32px",
               }}>
                 <div style={{
-                  fontFamily: SANS, fontFeatureSettings: "'tnum' 1, 'lnum' 1",
-                  fontWeight: 500, letterSpacing: "-0.04em", lineHeight: 0.9,
-                  whiteSpace: "nowrap", fontSize: "108px", color: INK,
+                  fontFamily: SANS, fontWeight: 500, letterSpacing: "-0.025em",
+                  lineHeight: 1.05, fontSize: "40px", color: INK,
                 }}>{s.number}</div>
                 <div style={{ fontSize: "15px", color: MUTED, lineHeight: 1.5 }}>{s.label}</div>
               </div>
@@ -202,7 +201,7 @@ export function Section({ index, label, heading, children }) {
         display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
       }}>
         <div style={{ gridColumn: "span 3" }}>
-          <div style={{ fontFamily: MONO, fontSize: "13px", letterSpacing: "0.04em" }}>{label}</div>
+          <div style={{ fontFamily: SANS, fontWeight: 500, letterSpacing: "-0.025em", lineHeight: 1.05, fontSize: "26px" }}>{label}</div>
         </div>
         <div style={{ gridColumn: "span 9" }}>
           {heading && (
