@@ -5,13 +5,13 @@ import IMG_TEAM_SINGAPORE from "../assets/leadership/IMG_TEAM_SINGAPORE.png";
 import IMG_TEAM_WORKSHOP from "../assets/leadership/IMG_TEAM_WORKSHOP.png";
 
 import { Page, Cover, Meta, Impact, Section, PrevNext, Footer, FadeIn,
-  ACCENT, INK, HAIR, FAINT, MUTED, MONO, SANS } from "./_swiss.jsx";
+  PAPER, ACCENT, INK, HAIR, FAINT, MUTED, MONO, SANS } from "./_swiss.jsx";
 
 function Phase({ tag, title, body }) {
   return (
     <div style={{
       padding: "24px 28px", border: `1px solid ${HAIR}`,
-      flex: "1 1 0", minWidth: "200px", background: "#FFFEFB",
+      flex: "1 1 0", minWidth: "200px", background: PAPER,
     }}>
       <div style={{
         fontFamily: MONO, fontSize: "11px", color: ACCENT,
@@ -160,8 +160,8 @@ export default function Leadership() {
       </FadeIn>
 
       <PrevNext
-        prev={{ href: "/strategic-design/station", title: "Connecting 100M people to the internet." }}
-        next={{ href: "/foundation", title: "How I think — the foundation." }}
+        prev={{ href: "/strategic-design/files", title: "From pivot to 500M users." }}
+        next={null}
       />
       <Footer />
     </Page>

@@ -64,8 +64,8 @@ export default function CsSearch() {
       <PrevNext
         prev={{ href: "/strategic-design/gemini-india",
                 title: "Differentiating an AI product for a billion-person market." }}
-        next={{ href: "/strategic-design/ecosystem",
-                title: "Designing an ecosystem, not just an app." }}
+        next={{ href: "/strategic-design/files",
+                title: "From pivot to 500M users." }}
       />
       <Footer />
     </Page>
