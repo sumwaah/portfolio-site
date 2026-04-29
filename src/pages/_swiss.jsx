@@ -88,6 +88,9 @@ export function Page({ children }) {
 
 // ── Cover (case-study hero)
 export function Cover({ chapter, title, subtitle, accent = "500M", confidential = false }) {
+  // Strip "§ Case 01 — " / "§ Chapter 02 — " prefix, keep only the label after the dash
+  const chapterLabel = chapter.includes(' — ') ? chapter.split(' — ').slice(1).join(' — ') : chapter;
+
   // Render title with optional accent token replaced in red
   const renderTitle = () => {
     if (!accent || !title.includes(accent)) return title;
@@ -104,7 +107,7 @@ export function Cover({ chapter, title, subtitle, accent = "500M", confidential 
         <div style={{
           fontFamily: MONO, fontSize: "12px", color: ACCENT,
           marginBottom: "48px", letterSpacing: "0.04em",
-        }}>{chapter}</div>
+        }}>{chapterLabel}</div>
         <h1 style={{
           fontFamily: SANS, fontWeight: 600, letterSpacing: "-0.035em",
           lineHeight: 0.96, fontSize: "112px", margin: 0, maxWidth: "1100px",
@@ -154,17 +157,13 @@ export function Meta({ items }) {
 }
 
 // ── Impact / By the numbers
-export function Impact({ stats, label = "By the numbers." }) {
+export function Impact({ stats, label = "Impact" }) {
   return (
     <div style={{
       padding: "80px 56px", borderBottom: `1px solid ${INK}`,
       display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
     }}>
       <div style={{ gridColumn: "span 3" }}>
-        <div style={{
-          fontFamily: MONO, fontSize: "12px", color: ACCENT,
-          letterSpacing: "0.04em", marginBottom: "8px",
-        }}>§ Impact</div>
         <h2 style={{
           fontFamily: SANS, fontWeight: 500, letterSpacing: "-0.025em",
           lineHeight: 1.05, fontSize: "26px", margin: 0,
@@ -204,12 +203,6 @@ export function Section({ index, label, heading, children }) {
         display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
       }}>
         <div style={{ gridColumn: "span 3" }}>
-          {index !== undefined && (
-            <div style={{
-              fontFamily: MONO, fontSize: "11px", color: ACCENT,
-              marginBottom: "8px", letterSpacing: "0.04em",
-            }}>§ {String(index).padStart(2, "0")}</div>
-          )}
           <div style={{ fontFamily: MONO, fontSize: "13px", letterSpacing: "0.04em" }}>{label}</div>
         </div>
         <div style={{ gridColumn: "span 9" }}>
