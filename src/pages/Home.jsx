@@ -105,9 +105,6 @@ export default function Home() {
           borderBottom: `1px solid ${INK}`,
         }}>
           <div style={{ gridColumn: "span 8" }}>
-            <div style={{ fontFamily: MONO, fontSize: "12px", color: ACCENT, marginBottom: "40px", letterSpacing: "0.04em" }}>
-              § 01 — Cover
-            </div>
             <h1 style={{
               fontFamily: SANS, fontWeight: 600, letterSpacing: "-0.035em",
               lineHeight: 0.96, fontSize: "140px", margin: 0,
@@ -145,7 +142,7 @@ export default function Home() {
               Selected work
             </div>
             <h2 style={{
-              fontFamily: SANS, fontWeight: 500, letterSpacing: "-0.025em",
+              fontFamily: SERIF, fontStyle: "italic", fontWeight: 400, letterSpacing: "-0.01em",
               lineHeight: 1.05, margin: 0, fontSize: "40px", maxWidth: "720px",
             }}>
               Four projects across product, platform, and teams.
@@ -178,7 +175,7 @@ export default function Home() {
                     lineHeight: 1.05, fontSize: "40px", margin: 0, maxWidth: "440px",
                   }}>{p.title}</h3>
                   <div style={{ fontFamily: MONO, fontSize: "11px", color: MUTED, letterSpacing: "0.04em", marginTop: "20px" }}>
-                    {p.client} &nbsp;·&nbsp; {p.tag} &nbsp;·&nbsp; {p.year}
+                    {p.client} &nbsp;·&nbsp; {p.year}
                   </div>
                 </div>
                 <div style={{ gridColumn: "span 3", paddingTop: "8px", paddingBottom: "8px" }}>
@@ -192,7 +189,6 @@ export default function Home() {
               </Link>
             </FadeIn>
           ))}
-          <div style={{ borderTop: `1px solid ${INK}` }} />
         </div>
       </div>
 
@@ -220,9 +216,6 @@ export default function Home() {
           ))}
         </div>
         <div style={{ gridColumn: "span 4" }}>
-          <div style={{ fontFamily: MONO, fontSize: "11px", letterSpacing: "0.04em", color: MUTED, marginBottom: "16px" }}>
-            Tenets · 04
-          </div>
           <div style={{ borderTop: `1px solid ${INK}` }}>
             {BELIEFS.map((b, i) => (
               <div key={i} style={{
@@ -251,8 +244,8 @@ export default function Home() {
         </div>
         <div style={{ gridColumn: "span 9" }}>
           <h2 style={{
-            fontFamily: SANS, fontWeight: 600, letterSpacing: "-0.035em",
-            lineHeight: 0.96, fontSize: "84px", margin: "0 0 32px",
+            fontFamily: SANS, fontWeight: 600, letterSpacing: "-0.03em",
+            lineHeight: 1.05, fontSize: "40px", margin: "0 0 32px",
           }}>
             sumier<span style={{ color: ACCENT }}>@</span>gmail.com
           </h2>
@@ -267,11 +260,11 @@ export default function Home() {
       {/* FOOTER */}
       <div style={{
         padding: "16px 56px",
-        display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
+        display: "grid", gridTemplateColumns: "1fr 1fr", columnGap: "24px",
+        fontFamily: MONO, fontSize: "11px", color: MUTED,
       }}>
-        <span style={{ gridColumn: "span 4", fontFamily: MONO, fontSize: "11px", color: MUTED }}>© Sumier Phalake · 2026</span>
-        <span style={{ gridColumn: "span 4", fontFamily: MONO, fontSize: "11px", color: MUTED }}>San Francisco · California</span>
-        <span style={{ gridColumn: "span 4", textAlign: "right", fontFamily: MONO, fontSize: "11px", color: MUTED }}>Set in Inter Tight</span>
+        <span>© Sumier Phalake · 2026</span>
+        <span style={{ textAlign: "right" }}>San Francisco · California</span>
       </div>
     </div>
   );
