@@ -137,16 +137,10 @@ export default function Home() {
       {/* INDEX / SELECTED WORK */}
       <div id="work" style={{ padding: "72px 56px 0", borderBottom: `1px solid ${INK}` }}>
         <FadeIn>
-          <div style={{ marginBottom: "40px" }}>
-            <div style={{ fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em", marginBottom: "16px" }}>
+          <div style={{ marginBottom: "24px" }}>
+            <div style={{ fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em" }}>
               Selected work
             </div>
-            <h2 style={{
-              fontFamily: SERIF, fontStyle: "italic", fontWeight: 400, letterSpacing: "-0.01em",
-              lineHeight: 1.05, margin: 0, fontSize: "40px", maxWidth: "720px",
-            }}>
-              Four projects across product, platform, and teams.
-            </h2>
           </div>
         </FadeIn>
 
@@ -155,7 +149,7 @@ export default function Home() {
             <FadeIn key={p.number} delay={i * 0.05}>
               <Link to={p.href} style={{
                 display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
-                borderTop: `1px solid ${INK}`, padding: "32px 0",
+                borderTop: i > 0 ? `1px solid ${INK}` : "none", padding: "32px 0",
                 alignItems: "stretch", textDecoration: "none", color: "inherit",
               }}>
                 <div style={{ gridColumn: "span 1", paddingTop: "14px", fontFamily: SANS }}>
@@ -194,7 +188,7 @@ export default function Home() {
 
       {/* ABOUT */}
       <div id="about" style={{
-        padding: "80px 56px", borderBottom: `1px solid ${INK}`,
+        padding: "48px 56px", borderBottom: `1px solid ${INK}`,
         display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
       }}>
         <div style={{ gridColumn: "span 3", fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em" }}>
@@ -216,10 +210,10 @@ export default function Home() {
           ))}
         </div>
         <div style={{ gridColumn: "span 4" }}>
-          <div style={{ borderTop: `1px solid ${INK}` }}>
+          <div>
             {BELIEFS.map((b, i) => (
               <div key={i} style={{
-                borderBottom: `1px solid ${HAIR}`, padding: "20px 0",
+                borderBottom: i < BELIEFS.length - 1 ? `1px solid ${HAIR}` : "none", padding: "20px 0",
                 display: "grid", gridTemplateColumns: "32px 1fr", gap: "12px",
               }}>
                 <span style={{ fontFamily: MONO, fontSize: "11px", color: ACCENT }}>0{i + 1}</span>
@@ -235,7 +229,7 @@ export default function Home() {
 
       {/* CONTACT */}
       <div id="contact" style={{
-        padding: "96px 56px",
+        padding: "48px 56px",
         display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
         borderBottom: `1px solid ${INK}`,
       }}>
