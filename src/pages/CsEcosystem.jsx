@@ -2,14 +2,14 @@
 // Designing an ecosystem, not just an app.
 
 import { Page, Cover, Meta, Impact, Section, Steps, Quote, PrevNext, Footer,
-  ACCENT, INK, HAIR, MUTED, MONO } from "./_swiss.jsx";
+  PAPER, ACCENT, INK, HAIR, MUTED, MONO } from "./_swiss.jsx";
 
 // Minimal connected-nodes diagram, restyled in Swiss vocabulary.
 function EcosystemDiagram() {
   return (
     <div style={{
       padding: "72px 56px", borderBottom: `1px solid ${HAIR}`,
-      display: "flex", justifyContent: "center", background: "#FFFEFB",
+      display: "flex", justifyContent: "center", background: PAPER,
     }}>
       <svg width="480" height="260" viewBox="0 0 480 260" fill="none">
         <circle cx="240" cy="130" r="28" stroke={ACCENT} strokeWidth="1.25" fill="none" />
