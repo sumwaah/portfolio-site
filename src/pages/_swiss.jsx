@@ -190,7 +190,7 @@ export function Impact({ stats, label = "Impact" }) {
       <div style={{ gridColumn: isMobile ? "auto" : "span 3", marginBottom: isMobile ? "20px" : 0 }}>
         <h2 style={{
           fontFamily: SANS, fontWeight: 500, letterSpacing: "-0.025em",
-          lineHeight: 1.05, fontSize: "26px", margin: 0,
+          lineHeight: 1.05, fontSize: isMobile ? "16px" : "20px", margin: 0,
         }}>{label}</h2>
       </div>
       <div style={{ gridColumn: isMobile ? "auto" : "span 9" }}>
@@ -233,7 +233,7 @@ export function Section({ index, label, heading, children }) {
         <div style={{ gridColumn: isMobile ? "auto" : "span 3", marginBottom: isMobile ? "14px" : 0 }}>
           <div style={{
             fontFamily: SANS, fontWeight: 500, letterSpacing: "-0.025em",
-            lineHeight: 1.05, fontSize: isMobile ? "20px" : "26px",
+            lineHeight: 1.05, fontSize: isMobile ? "16px" : "20px",
           }}>{label}</div>
         </div>
         <div style={{ gridColumn: isMobile ? "auto" : "span 9" }}>
