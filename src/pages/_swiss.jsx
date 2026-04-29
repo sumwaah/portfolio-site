@@ -4,7 +4,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
-export const PAPER  = "#FAFAF7";
+export const PAPER  = "#FFFFFF";
 export const INK    = "#0A0A0A";
 export const ACCENT = "#E8443C";
 export const MUTED  = "#5A5A5A";
