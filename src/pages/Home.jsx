@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
-import { FadeIn, PAPER, INK, ACCENT, MUTED, FAINT, HAIR, SANS, SERIF, MONO } from "./_swiss.jsx";
+import { FadeIn, useIsMobile,
+  PAPER, INK, ACCENT, MUTED, FAINT, HAIR, SANS, SERIF, MONO } from "./_swiss.jsx";
 
 import IMG_HERO  from "../assets/home/IMG_HERO.png";
 import IMG_TRAIN from "../assets/home/IMG_TRAIN.png";
@@ -17,7 +18,6 @@ const PROJECTS = [
     image: IMG_TRAIN,
     year: "2024",
     client: "Google",
-    tag: "Strategy",
     href: "/strategic-design/gemini-india",
   },
   {
@@ -27,7 +27,6 @@ const PROJECTS = [
     image: IMG_SHOP,
     year: "2023",
     client: "Google Search",
-    tag: "Policy",
     href: "/strategic-design/search-regulation",
   },
   {
@@ -37,7 +36,6 @@ const PROJECTS = [
     image: IMG_FILES,
     year: "2018–2022",
     client: "Google NBU",
-    tag: "Product",
     href: "/strategic-design/files",
   },
   {
@@ -47,7 +45,6 @@ const PROJECTS = [
     image: IMG_TEAM,
     year: "2017–2023",
     client: "Google NBU",
-    tag: "Leadership",
     href: "/leadership",
   },
 ];
@@ -66,23 +63,29 @@ const BELIEFS = [
 ];
 
 // ── Home-specific nav (uses anchor links, not router Links)
-function Nav() {
+function Nav({ isMobile }) {
   return (
     <div style={{
-      display: "grid", gridTemplateColumns: "repeat(12, 1fr)", padding: "20px 56px",
-      borderBottom: `1px solid ${INK}`, columnGap: "24px", alignItems: "center",
+      display: "flex", justifyContent: "space-between", alignItems: "center",
+      padding: isMobile ? "16px 24px" : "20px 56px",
+      borderBottom: `1px solid ${INK}`,
       background: PAPER, position: "sticky", top: 0, zIndex: 10,
     }}>
-      <div style={{ gridColumn: "span 4", display: "flex", alignItems: "center", gap: "10px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
         <div style={{ width: "10px", height: "10px", background: ACCENT }} />
         <span style={{ fontFamily: MONO, fontSize: "12px" }}>Sumier Phalake</span>
       </div>
-      <div style={{ gridColumn: "span 5", fontFamily: MONO, fontSize: "12px", color: MUTED }}>
-        Design & strategy leadership · San Francisco
-      </div>
-      <div style={{ gridColumn: "span 3", display: "flex", justifyContent: "flex-end", gap: "24px", fontFamily: MONO, fontSize: "12px" }}>
-        <a href="#work" style={{ color: INK, textDecoration: "none" }}>Work</a>
-        <a href="#about" style={{ color: INK, textDecoration: "none" }}>About</a>
+      {!isMobile && (
+        <div style={{ fontFamily: MONO, fontSize: "12px", color: MUTED }}>
+          Design & strategy leadership · San Francisco
+        </div>
+      )}
+      <div style={{
+        display: "flex", gap: isMobile ? "16px" : "24px",
+        fontFamily: MONO, fontSize: "12px",
+      }}>
+        <a href="#work"    style={{ color: INK, textDecoration: "none" }}>Work</a>
+        <a href="#about"   style={{ color: INK, textDecoration: "none" }}>About</a>
         <a href="#contact" style={{ color: INK, textDecoration: "none" }}>Contact</a>
       </div>
     </div>
@@ -90,24 +93,24 @@ function Nav() {
 }
 
 export default function Home() {
+  const isMobile = useIsMobile();
+  const H = isMobile ? "24px" : "56px"; // horizontal padding shorthand
+
   return (
     <div style={{
       fontFamily: SANS, background: PAPER, color: INK,
       fontFeatureSettings: "'ss01','cv11'", minHeight: "100vh",
     }}>
-      <Nav />
+      <Nav isMobile={isMobile} />
 
       {/* HERO */}
       <FadeIn>
-        <div style={{
-          padding: "80px 56px 96px", display: "grid",
-          gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
-          borderBottom: `1px solid ${INK}`,
-        }}>
-          <div style={{ gridColumn: "span 8" }}>
+        {isMobile ? (
+          /* ── Mobile hero: stacked, photo below text */
+          <div style={{ padding: "40px 24px 48px", borderBottom: `1px solid ${INK}` }}>
             <h1 style={{
               fontFamily: SANS, fontWeight: 600, letterSpacing: "-0.035em",
-              lineHeight: 0.96, fontSize: "140px", margin: 0,
+              lineHeight: 0.96, fontSize: "72px", margin: 0,
             }}>
               Designing{" "}
               <span style={{ fontFamily: SERIF, fontStyle: "italic", fontWeight: 400, letterSpacing: "-0.01em" }}>
@@ -117,25 +120,55 @@ export default function Home() {
               <br />from ambiguity.
             </h1>
             <p style={{
-              fontSize: "20px", lineHeight: 1.5, margin: "48px 0 0",
-              maxWidth: "640px", color: MUTED,
+              fontSize: "17px", lineHeight: 1.55, margin: "24px 0 0", color: MUTED,
             }}>
               I solve cross-functional strategy problems through the lens of human insight. I think in systems —
               building the teams, processes, and products needed to transform high-stakes ambiguity into clarity.
             </p>
+            <img src={IMG_HERO} alt="Sumier" style={{
+              width: "60%", display: "block", marginTop: "32px",
+            }} />
           </div>
+        ) : (
+          /* ── Desktop hero: 8+4 grid */
           <div style={{
-            gridColumn: "span 4",
-            display: "flex", flexDirection: "column", justifyContent: "flex-start",
-            paddingTop: "40px",
+            padding: "80px 56px 96px", display: "grid",
+            gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
+            borderBottom: `1px solid ${INK}`,
           }}>
-            <img src={IMG_HERO} alt="Sumier" style={{ width: "100%", display: "block" }} />
+            <div style={{ gridColumn: "span 8" }}>
+              <h1 style={{
+                fontFamily: SANS, fontWeight: 600, letterSpacing: "-0.035em",
+                lineHeight: 0.96, fontSize: "140px", margin: 0,
+              }}>
+                Designing{" "}
+                <span style={{ fontFamily: SERIF, fontStyle: "italic", fontWeight: 400, letterSpacing: "-0.01em" }}>
+                  clarity
+                </span>{" "}
+                <span style={{ color: ACCENT }}>·</span>
+                <br />from ambiguity.
+              </h1>
+              <p style={{
+                fontSize: "20px", lineHeight: 1.5, margin: "48px 0 0",
+                maxWidth: "640px", color: MUTED,
+              }}>
+                I solve cross-functional strategy problems through the lens of human insight. I think in systems —
+                building the teams, processes, and products needed to transform high-stakes ambiguity into clarity.
+              </p>
+            </div>
+            <div style={{
+              gridColumn: "span 4",
+              display: "flex", flexDirection: "column", justifyContent: "flex-start",
+              paddingTop: "40px",
+            }}>
+              <img src={IMG_HERO} alt="Sumier" style={{ width: "100%", display: "block" }} />
+            </div>
           </div>
-        </div>
+        )}
       </FadeIn>
 
-      {/* INDEX / SELECTED WORK */}
-      <div id="work" style={{ padding: "48px 56px 0", borderBottom: `1px solid ${INK}` }}>
+      {/* SELECTED WORK */}
+      <div id="work" style={{ padding: `48px ${H} 0`, borderBottom: `1px solid ${INK}` }}>
         <FadeIn>
           <div style={{ marginBottom: "24px" }}>
             <div style={{ fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em" }}>
@@ -147,40 +180,69 @@ export default function Home() {
         <div>
           {PROJECTS.map((p, i) => (
             <FadeIn key={p.number} delay={i * 0.05}>
-              <Link to={p.href} style={{
-                display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
-                borderTop: i > 0 ? `1px solid ${INK}` : "none", padding: "32px 0",
-                alignItems: "stretch", textDecoration: "none", color: "inherit",
-              }}>
-                <div style={{ gridColumn: "span 1", paddingTop: "14px", fontFamily: SANS }}>
-                  <span style={{
-                    fontFeatureSettings: "'tnum' 1, 'lnum' 1",
-                    fontSize: "32px", color: MUTED,
-                    fontWeight: 300, letterSpacing: "-0.02em", lineHeight: 0.9,
-                  }}>{p.number}</span>
-                </div>
-                <div style={{
-                  gridColumn: "span 5",
-                  display: "flex", flexDirection: "column", justifyContent: "space-between",
-                  paddingTop: "8px", paddingBottom: "8px",
+              {isMobile ? (
+                /* ── Mobile project row: stacked card */
+                <Link to={p.href} style={{
+                  display: "block",
+                  borderTop: i > 0 ? `1px solid ${INK}` : "none",
+                  padding: "24px 0",
+                  textDecoration: "none", color: "inherit",
                 }}>
-                  <h3 style={{
-                    fontFamily: SANS, fontWeight: 600, letterSpacing: "-0.03em",
-                    lineHeight: 1.05, fontSize: "40px", margin: 0, maxWidth: "440px",
-                  }}>{p.title}</h3>
-                  <div style={{ fontFamily: MONO, fontSize: "11px", color: MUTED, letterSpacing: "0.04em", marginTop: "20px" }}>
+                  <div style={{ display: "flex", alignItems: "baseline", gap: "12px", marginBottom: "10px" }}>
+                    <span style={{
+                      fontFamily: SANS, fontFeatureSettings: "'tnum' 1",
+                      fontSize: "20px", color: MUTED, fontWeight: 300,
+                      letterSpacing: "-0.02em", lineHeight: 1, flexShrink: 0,
+                    }}>{p.number}</span>
+                    <h3 style={{
+                      fontFamily: SANS, fontWeight: 600, letterSpacing: "-0.025em",
+                      lineHeight: 1.1, fontSize: "22px", margin: 0,
+                    }}>{p.title}</h3>
+                  </div>
+                  <div style={{ fontFamily: MONO, fontSize: "11px", color: MUTED, letterSpacing: "0.04em", marginBottom: "12px" }}>
                     {p.client} &nbsp;·&nbsp; {p.year}
                   </div>
-                </div>
-                <div style={{ gridColumn: "span 3", paddingTop: "8px", paddingBottom: "8px" }}>
-                  <p style={{ fontSize: "14px", lineHeight: 1.55, margin: 0, color: MUTED }}>{p.description}</p>
-                </div>
-                <div style={{ gridColumn: "span 3" }}>
-                  <div style={{ aspectRatio: "16/11", overflow: "hidden", background: FAINT }}>
+                  <div style={{ aspectRatio: "16/9", overflow: "hidden", background: FAINT }}>
                     <img src={p.image} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                   </div>
-                </div>
-              </Link>
+                </Link>
+              ) : (
+                /* ── Desktop project row: 12-column grid */
+                <Link to={p.href} style={{
+                  display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
+                  borderTop: i > 0 ? `1px solid ${INK}` : "none", padding: "32px 0",
+                  alignItems: "stretch", textDecoration: "none", color: "inherit",
+                }}>
+                  <div style={{ gridColumn: "span 1", paddingTop: "14px", fontFamily: SANS }}>
+                    <span style={{
+                      fontFeatureSettings: "'tnum' 1, 'lnum' 1",
+                      fontSize: "32px", color: MUTED,
+                      fontWeight: 300, letterSpacing: "-0.02em", lineHeight: 0.9,
+                    }}>{p.number}</span>
+                  </div>
+                  <div style={{
+                    gridColumn: "span 5",
+                    display: "flex", flexDirection: "column", justifyContent: "space-between",
+                    paddingTop: "8px", paddingBottom: "8px",
+                  }}>
+                    <h3 style={{
+                      fontFamily: SANS, fontWeight: 600, letterSpacing: "-0.03em",
+                      lineHeight: 1.05, fontSize: "40px", margin: 0, maxWidth: "440px",
+                    }}>{p.title}</h3>
+                    <div style={{ fontFamily: MONO, fontSize: "11px", color: MUTED, letterSpacing: "0.04em", marginTop: "20px" }}>
+                      {p.client} &nbsp;·&nbsp; {p.year}
+                    </div>
+                  </div>
+                  <div style={{ gridColumn: "span 3", paddingTop: "8px", paddingBottom: "8px" }}>
+                    <p style={{ fontSize: "14px", lineHeight: 1.55, margin: 0, color: MUTED }}>{p.description}</p>
+                  </div>
+                  <div style={{ gridColumn: "span 3" }}>
+                    <div style={{ aspectRatio: "16/11", overflow: "hidden", background: FAINT }}>
+                      <img src={p.image} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                    </div>
+                  </div>
+                </Link>
+              )}
             </FadeIn>
           ))}
         </div>
@@ -188,17 +250,21 @@ export default function Home() {
 
       {/* ABOUT */}
       <div id="about" style={{
-        padding: "48px 56px", borderBottom: `1px solid ${INK}`,
-        display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
+        padding: isMobile ? "40px 24px" : "48px 56px",
+        borderBottom: `1px solid ${INK}`,
+        display: "grid",
+        gridTemplateColumns: isMobile ? "1fr" : "repeat(12, 1fr)",
+        columnGap: "24px",
+        gap: isMobile ? "32px" : "0",
       }}>
-        <div style={{ gridColumn: "span 3", fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em" }}>
+        <div style={{ gridColumn: isMobile ? "auto" : "span 3", fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em" }}>
           About
         </div>
-        <div style={{ gridColumn: "span 5" }}>
+        <div style={{ gridColumn: isMobile ? "auto" : "span 5" }}>
           <FadeIn>
             <h2 style={{
               fontFamily: SANS, fontWeight: 500, letterSpacing: "-0.025em",
-              lineHeight: 1.05, fontSize: "44px", margin: "0 0 32px",
+              lineHeight: 1.05, fontSize: isMobile ? "26px" : "44px", margin: "0 0 24px",
             }}>
               Twenty-plus years of design, mostly at the seam between people and platforms.
             </h2>
@@ -209,11 +275,12 @@ export default function Home() {
             </FadeIn>
           ))}
         </div>
-        <div style={{ gridColumn: "span 4" }}>
+        <div style={{ gridColumn: isMobile ? "auto" : "span 4" }}>
           <div>
             {BELIEFS.map((b, i) => (
               <div key={i} style={{
-                borderBottom: i < BELIEFS.length - 1 ? `1px solid ${HAIR}` : "none", padding: "20px 0",
+                borderBottom: i < BELIEFS.length - 1 ? `1px solid ${HAIR}` : "none",
+                padding: "20px 0",
                 display: "grid", gridTemplateColumns: "32px 1fr", gap: "12px",
               }}>
                 <span style={{ fontFamily: MONO, fontSize: "11px", color: ACCENT }}>0{i + 1}</span>
@@ -229,21 +296,23 @@ export default function Home() {
 
       {/* CONTACT */}
       <div id="contact" style={{
-        padding: "48px 56px",
-        display: "grid", gridTemplateColumns: "repeat(12, 1fr)", columnGap: "24px",
+        padding: isMobile ? "40px 24px" : "48px 56px",
+        display: "grid",
+        gridTemplateColumns: isMobile ? "1fr" : "repeat(12, 1fr)",
+        columnGap: "24px",
         borderBottom: `1px solid ${INK}`,
       }}>
-        <div style={{ gridColumn: "span 3", fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em" }}>
+        <div style={{ gridColumn: isMobile ? "auto" : "span 3", fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em", marginBottom: isMobile ? "16px" : 0 }}>
           Contact
         </div>
-        <div style={{ gridColumn: "span 9" }}>
+        <div style={{ gridColumn: isMobile ? "auto" : "span 9" }}>
           <h2 style={{
             fontFamily: SANS, fontWeight: 600, letterSpacing: "-0.03em",
-            lineHeight: 1.05, fontSize: "40px", margin: "0 0 32px",
+            lineHeight: 1.05, fontSize: isMobile ? "28px" : "40px", margin: "0 0 24px",
           }}>
             sumier<span style={{ color: ACCENT }}>@</span>gmail.com
           </h2>
-          <div style={{ fontFamily: MONO, fontSize: "13px", display: "flex", gap: "32px" }}>
+          <div style={{ fontFamily: MONO, fontSize: "13px", display: "flex", gap: "24px", flexWrap: "wrap" }}>
             <a href="mailto:sumier@gmail.com" style={{ color: INK, textDecoration: "none" }}>→ Email</a>
             <a href="https://www.linkedin.com" style={{ color: INK, textDecoration: "none" }}>→ LinkedIn</a>
             <a href="#" style={{ color: INK, textDecoration: "none" }}>→ Read CV</a>
@@ -253,12 +322,15 @@ export default function Home() {
 
       {/* FOOTER */}
       <div style={{
-        padding: "16px 56px",
-        display: "grid", gridTemplateColumns: "1fr 1fr", columnGap: "24px",
+        padding: isMobile ? "20px 24px" : "16px 56px",
+        display: "flex",
+        flexDirection: isMobile ? "column" : "row",
+        justifyContent: "space-between",
+        gap: isMobile ? "6px" : "0",
         fontFamily: MONO, fontSize: "11px", color: MUTED,
       }}>
         <span>© Sumier Phalake · 2026</span>
-        <span style={{ textAlign: "right" }}>San Francisco · California</span>
+        <span>San Francisco · California</span>
       </div>
     </div>
   );
