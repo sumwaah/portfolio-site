@@ -274,7 +274,7 @@ export default function Home() {
             </FadeIn>
           ))}
         </div>
-        <div style={{ gridColumn: isMobile ? "auto" : "span 5", paddingLeft: isMobile ? 0 : "24px" }}>
+        <div style={{ gridColumn: isMobile ? "auto" : "span 5", paddingLeft: isMobile ? 0 : "36px" }}>
           <div>
             {BELIEFS.map((b, i) => (
               <div key={i} style={{
@@ -301,10 +301,10 @@ export default function Home() {
         columnGap: "24px",
         borderBottom: `1px solid ${INK}`,
       }}>
-        <div style={{ gridColumn: isMobile ? "auto" : "span 3", fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em", marginBottom: isMobile ? "16px" : 0 }}>
+        <div style={{ gridColumn: isMobile ? "auto" : "span 2", fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em", marginBottom: isMobile ? "16px" : 0 }}>
           Contact
         </div>
-        <div style={{ gridColumn: isMobile ? "auto" : "span 9" }}>
+        <div style={{ gridColumn: isMobile ? "auto" : "span 10" }}>
           <h2 style={{
             fontFamily: SANS, fontWeight: 600, letterSpacing: "-0.03em",
             lineHeight: 1.05, fontSize: isMobile ? "28px" : "40px", margin: "0 0 24px",
