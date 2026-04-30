@@ -55,9 +55,9 @@ const ABOUT = [
 ];
 
 const BELIEFS = [
-  { title: "People not products", body: "Investing in people's growth results in successful products, not the other way around." },
+  { title: "People not products", body: "Investing in people's growth results in successful products." },
   { title: "Start with what you don't know", body: "The most valuable insights come from the problems you didn't know existed." },
-  { title: "Build to learn, then build to last", body: "Invest the right level of craft to learn trustworthy things, then scale that investment." },
+  { title: "Build to learn, then build to last", body: "Invest the right level of craft to learn and gain conviction in your solution, then scale that investment." },
   { title: "Culture is a design problem", body: "It happens whether you work on it or not. Great leaders design it intentionally." },
 ];
 
@@ -265,7 +265,7 @@ export default function Home() {
               fontFamily: SANS, fontWeight: 500, letterSpacing: "-0.025em",
               lineHeight: 1.05, fontSize: isMobile ? "26px" : "44px", margin: "0 0 24px",
             }}>
-              Twenty-plus years of design, mostly at the seam between people and platforms.
+              With over twenty years of design and strategy expertise, here's a few learnings I live by.
             </h2>
           </FadeIn>
           {ABOUT.map((p, i) => (
