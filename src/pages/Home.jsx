@@ -274,13 +274,13 @@ export default function Home() {
             </FadeIn>
           ))}
         </div>
-        <div style={{ gridColumn: isMobile ? "auto" : "span 4" }}>
+        <div style={{ gridColumn: isMobile ? "auto" : "span 4", paddingLeft: isMobile ? 0 : "16px" }}>
           <div>
             {BELIEFS.map((b, i) => (
               <div key={i} style={{
                 borderBottom: i < BELIEFS.length - 1 ? `1px solid ${HAIR}` : "none",
                 padding: "20px 0",
-                display: "grid", gridTemplateColumns: "32px 1fr", gap: "12px",
+                display: "grid", gridTemplateColumns: "32px 1fr", gap: "12px", alignItems: "start",
               }}>
                 <span style={{ fontFamily: MONO, fontSize: "11px", color: ACCENT }}>0{i + 1}</span>
                 <div>
