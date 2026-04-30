@@ -256,7 +256,7 @@ export default function Home() {
         columnGap: "24px",
         gap: isMobile ? "32px" : "0",
       }}>
-        <div style={{ gridColumn: isMobile ? "auto" : "span 3", fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em" }}>
+        <div style={{ gridColumn: isMobile ? "auto" : "span 2", fontFamily: MONO, fontSize: "12px", color: ACCENT, letterSpacing: "0.04em" }}>
           About
         </div>
         <div style={{ gridColumn: isMobile ? "auto" : "span 5" }}>
@@ -274,7 +274,7 @@ export default function Home() {
             </FadeIn>
           ))}
         </div>
-        <div style={{ gridColumn: isMobile ? "auto" : "span 4", paddingLeft: isMobile ? 0 : "24px" }}>
+        <div style={{ gridColumn: isMobile ? "auto" : "span 5", paddingLeft: isMobile ? 0 : "24px" }}>
           <div>
             {BELIEFS.map((b, i) => (
               <div key={i} style={{
@@ -282,7 +282,7 @@ export default function Home() {
                 padding: "20px 0",
                 display: "grid", gridTemplateColumns: "32px 1fr", gap: "12px", alignItems: "start",
               }}>
-                <span style={{ fontFamily: MONO, fontSize: "11px", color: ACCENT }}>0{i + 1}</span>
+                <span style={{ fontFamily: MONO, fontSize: "11px", color: ACCENT, display: "block", lineHeight: 1 }}>0{i + 1}</span>
                 <div>
                   <div style={{ fontSize: "15px", fontWeight: 500, marginBottom: "4px" }}>{b.title}.</div>
                   <div style={{ fontSize: "14px", color: MUTED, lineHeight: 1.55 }}>{b.body}</div>
