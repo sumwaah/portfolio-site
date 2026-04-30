@@ -14,16 +14,16 @@ const PROJECTS = [
   {
     number: "01",
     title: "Differentiating an AI product for a billion-person market",
-    description: "End-to-end product strategy for a major AI product in India — from audience identification and field research to co-created solutions and business-ready recommendations.",
+    description: "End-to-end product and go-to-market strategy for a major AI product in India — from audience identification and field research to high craft design solutions and business-ready recommendations.",
     image: IMG_TRAIN,
     year: "2024",
-    client: "Google",
+    client: "Google Gemini",
     href: "/strategic-design/gemini-india",
   },
   {
     number: "02",
-    title: "Evolving a business model under regulatory pressure",
-    description: "Designing solutions that satisfy user needs, elevate third-party content, and comply with global regulations — simultaneously.",
+    title: "AI, regulations and the future of search",
+    description: "Designing for users, merchants, and global regulators — in a rapidly shifting ecosystem driven by AI.",
     image: IMG_SHOP,
     year: "2023",
     client: "Google Search",
@@ -31,8 +31,8 @@ const PROJECTS = [
   },
   {
     number: "03",
-    title: "From pivot to 500 million users",
-    description: "Files by Google — investing the right level of craft to learn, finding product-market fit, then scaling to the highest-rated Google app.",
+    title: "Growing a beloved product to 500 million users",
+    description: "Investing in the right level of craft without sacrificing learning velocity to scale Files by Google to 500M+ users and the highest-rated Google app.",
     image: IMG_FILES,
     year: "2018–2022",
     client: "Google NBU",
@@ -40,8 +40,8 @@ const PROJECTS = [
   },
   {
     number: "04",
-    title: "Building the machine",
-    description: "Head of Design at Google's Next Billion Users — building a 35-person UX team, redesigning the product development process, and cultivating a mission-driven culture.",
+    title: "Building a team people didn't want to leave",
+    description: "Head of Design at Google's Next Billion Users — building a ~35-person UX team, redesigning the product development process, and cultivating a mission-driven culture.",
     image: IMG_TEAM,
     year: "2017–2023",
     client: "Google NBU",
@@ -50,9 +50,8 @@ const PROJECTS = [
 ];
 
 const ABOUT = [
-  "A Sinclair ZX Spectrum started me off on my journey as a lover of all things tech. I grew up in Mumbai, lived for many years in Atlanta, and now call San Francisco home.",
-  "A life long gamer, I developed a love for narrative experiences that triggered deep emotional responses in me — games such as Grim Fandango. I carried that with me when I studied design and interactive narratives in grad school.",
-  "I've been designing for over 20 years. I hold an MS in Digital Media from Georgia Tech and started my career at IBM Interactive before joining Google, where I've spent the last decade.",
+  "My dad gifted me a Sinclair ZX Spectrum at the age of 4. For a child growing up in Mumbai, this magical device sparked a life long curiosity about technology. That passion to learn how things work and how they impact people served me well in Design School and subsequently, in a 20+ year career as a Product Designer.",
+  "I hold an MS in Digital Media from Georgia Tech and started my career at IBM Interactive before joining Google, where for the past decade I've worked on several strategic consumer, enterprise and AI products. I've built high-performing teams, worked on fast-paced 0 to 1 products and have a deep love of craft and human understanding",
 ];
 
 const BELIEFS = [
