@@ -50,8 +50,8 @@ const PROJECTS = [
 ];
 
 const ABOUT = [
-  "My dad gifted me a Sinclair ZX Spectrum at the age of 4. For a child growing up in Mumbai, this magical device sparked a life long curiosity about technology. That passion to learn how things work and how they impact people served me well in Design School and subsequently, in a 20+ year career as a Product Designer.",
-  "I hold an MS in Digital Media from Georgia Tech and started my career at IBM Interactive before joining Google, where for the past decade I've worked on several strategic consumer, enterprise and AI products. I've built high-performing teams, worked on fast-paced 0 to 1 products and have a deep love of craft and human understanding",
+  "My dad gifted me a Sinclair ZX Spectrum at the age of 4. For a child growing up in Mumbai, this seemingly magical device sparked a life long curiosity about technology. That passion to learn how things work and how they impact people served me well in Design School and subsequently, in a 20+ year career as a Product Designer.",
+  "I hold an MS in Digital Media from Georgia Tech and started my career at IBM Interactive before joining Google, where for the past decade I've worked on several strategic consumer, enterprise and AI products. I've built high-performing teams, worked on fast-paced 0 to 1 products and have a deep love of craft.",
 ];
 
 const BELIEFS = [
